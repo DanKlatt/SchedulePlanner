@@ -18,16 +18,17 @@ public class Role {
     
     public Role() {
         type = Type_Worker;
+        name = "Worker";
     }
-    public Role(String Name) {
-        name = Name;
-        type = Type_Worker;
-    }
+
     public Role(int Type) {
         type = Type;
-    }
-    public void setName(String Name) {
-        name = Name;
+        if(type==Type_Manager) {
+            name = "Manager";
+        }
+        else if(type==Type_Worker) {
+            name = "Worker";
+        }
     }
     public String getName() {
         return name;
@@ -37,6 +38,11 @@ public class Role {
            type!= Type_Worker) {
             System.out.println("Incorrect type for SetRole\n");
             return;
+        }
+        if (type == Type_Manager) {
+            name = "Manager";
+        } else if (type == Type_Worker) {
+            name = "Worker";
         }
     }
     public int getRole() {
