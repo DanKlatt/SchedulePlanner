@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="edu.uah.cs321.team2.scheduleplanner.TestingViewController">
+    <stylesheets>
+        <URL value="@scheduleplanner.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="237.0" layoutY="192.0" text="Composite Schedule" />
+   </children>
+</AnchorPane>

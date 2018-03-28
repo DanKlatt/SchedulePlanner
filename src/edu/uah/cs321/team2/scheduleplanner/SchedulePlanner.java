@@ -14,7 +14,8 @@ public class SchedulePlanner extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        // When working on your spcific view, change file name here
+        Parent root = FXMLLoader.load(getClass().getResource("/edu/uah/cs321/team2/scheduleplanner/view/CompositeSchedule.fxml"));
         
         Scene scene = new Scene(root);
         
