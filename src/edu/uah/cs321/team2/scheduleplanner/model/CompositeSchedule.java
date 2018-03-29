@@ -25,6 +25,7 @@ public class CompositeSchedule {
      */
     /*
     public ArrayList<Person> getPeople() {
+        // TODO: make this a deep copy
         return new ArrayList<Person>(this.people);
     }
     */
@@ -36,6 +37,7 @@ public class CompositeSchedule {
      */
     /*
     public ArrayList<Shift> getShifts() {
+        // TODO: make this a deep copy
         return new ArrayList<Shift>(this.shifts);
     }
     */
