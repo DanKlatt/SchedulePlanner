@@ -9,6 +9,8 @@
  * @author sameerawarsi
  */
 
+package edu.uah.cs321.team2.scheduleplanner.model;
+
 public class Role {
     public static final int Type_Manager = 1;
     public static final int Type_Worker = 0;
