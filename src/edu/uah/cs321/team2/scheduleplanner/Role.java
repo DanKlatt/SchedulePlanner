@@ -45,6 +45,7 @@ public class Role {
             name = "Worker";
         }
     }
+    //get role
     public int getRole() {
         return type;
     }
