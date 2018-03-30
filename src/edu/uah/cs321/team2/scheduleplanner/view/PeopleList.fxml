@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -7,11 +8,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="200.0" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.TestingViewController">
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="215.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.TestingViewController">
     <stylesheets>
-        <URL value="@scheduleplanner.css"/>
+        <URL value="@scheduleplanner.css" />
     </stylesheets>
     <children>
-      <Label layoutX="237.0" layoutY="192.0" text="People List" />
+        <TableView layoutY="-2.0" prefHeight="433.0" prefWidth="215.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+            <columns>
+                <TableColumn prefWidth="70.97576522827148" text="Name" />
+                <TableColumn prefWidth="79.02422332763672" text="Phone" />
+                <TableColumn prefWidth="75.0" text="Role" />
+            </columns>
+        </TableView>
+      <Button layoutX="14.0" layoutY="438.0" mnemonicParsing="false" text="Add" />
+      <Button layoutX="65.0" layoutY="438.0" mnemonicParsing="false" text="Edit" />
+      <Button layoutX="142.0" layoutY="438.0" mnemonicParsing="false" text="Delete" />
     </children>
 </AnchorPane>
