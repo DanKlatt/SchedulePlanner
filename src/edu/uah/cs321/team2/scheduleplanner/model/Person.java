@@ -27,7 +27,7 @@ public class Person {
         this.phone = phone;
     }
     public String getRole(){
-        //return roleName;
+        return role.getName();
     }
     public void setRole(Role role){
         this.role = role;
