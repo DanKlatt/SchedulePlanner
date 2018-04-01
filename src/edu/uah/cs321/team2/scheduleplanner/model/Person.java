@@ -11,14 +11,20 @@ package edu.uah.cs321.team2.scheduleplanner.model;
  */
 public class Person {
 
-    public Person(String name, String phone, Role role){
-        this.name = name;
+    public Person(String firstName, String lastName, String phone, Role role){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.role = role;
     }
     public String getName(){
-        return name;
+        return firstName + " " + lastName;
     }
-    public void setName(String name){
-        this.name = name;
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName){
+        this.lastName = lastName;
     }
     public String getPhone(){
         return phone;
@@ -32,14 +38,10 @@ public class Person {
     public void setRole(Role role){
         this.role = role;
     }
-    
-    
-    
-    
-    
-    private String name;
+          
+    private String firstName;
+    private String lastName;
     private String phone;
     private Role role;
-    
-    
+     
 }
