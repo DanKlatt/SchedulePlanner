@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package edu.uah.cs321.team2.scheduleplanner;
+package edu.uah.cs321.team2.scheduleplanner.model;
 
 /**
  *
@@ -63,7 +58,7 @@ public class Shift {
    public int getEndTime() {
        return endTime;
    }
-   
+   /*
    public ArrayList<Person> getPeople() {
        return (ArrayList<Person>) people.clone();
    }
@@ -77,10 +72,9 @@ public class Shift {
            people.remove(oldPerson);
        }
    }
-    
+   */
    private int day = 0;
    private int startTime = 0;
    private int endTime = 0;
-   private ArrayList<Person> people = new ArrayList<Person>();
-   
+   //private ArrayList<Person> people = new ArrayList<Person>();
 }
