@@ -68,7 +68,9 @@ public class Shift {
    }
    
    public void removePersonFromList(Person oldPerson) {
-       people.remove(oldPerson);
+       if (!people.isEmpty() && people.contains(oldPerson)) {
+           people.remove(oldPerson);
+       }
    }
    */
    private int day = 0;
