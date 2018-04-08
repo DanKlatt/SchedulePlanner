@@ -7,11 +7,26 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.TestingViewController">
-    <stylesheets>
-        <URL value="@scheduleplanner.css"/>
-    </stylesheets>
-    <children>
-      <Label layoutX="237.0" layoutY="192.0" text="Add / Edit Person" />
-    </children>
-</AnchorPane>
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="278.0" prefWidth="497.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Label layoutX="99.0" layoutY="73.0" text="First Name: " />
+            <Label layoutX="100.0" layoutY="117.0" text="Last Name: " />
+            <Label layoutX="100.0" layoutY="158.0" text="Phone:" />
+            <Label layoutX="99.0" layoutY="213.0" text="Role:" />
+            <TextField id="firstname" layoutX="191.0" layoutY="68.0" prefHeight="31.0" prefWidth="252.0" />
+            <TextField id="lastname" layoutX="191.0" layoutY="112.0" prefHeight="31.0" prefWidth="252.0" />            
+            <TextField id="phonenum" layoutX="191.0" layoutY="153.0" prefHeight="31.0" prefWidth="252.0" />
+            <RadioButton id="worker" layoutX="191.0" layoutY="213.0" mnemonicParsing="false" text="Worker">
+               <toggleGroup>
+                  <ToggleGroup fx:id="role" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="manager" layoutX="285.0" layoutY="213.0" mnemonicParsing="false" text="Manager" toggleGroup="$role" />            
+            <Button layoutX="427.0" layoutY="303.0" mnemonicParsing="false" text="Save" />
+            <Button layoutX="502.0" layoutY="303.0" mnemonicParsing="false" text="Cancel" />            
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
