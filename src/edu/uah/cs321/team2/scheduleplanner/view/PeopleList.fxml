@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
@@ -8,20 +9,206 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="215.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.TestingViewController">
-    <stylesheets>
-        <URL value="@scheduleplanner.css" />
-    </stylesheets>
-    <children>
-        <TableView layoutY="-2.0" prefHeight="433.0" prefWidth="215.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
-            <columns>
-                <TableColumn prefWidth="70.97576522827148" text="Name" />
-                <TableColumn prefWidth="79.02422332763672" text="Phone" />
-                <TableColumn prefWidth="75.0" text="Role" />
-            </columns>
-        </TableView>
-      <Button layoutX="14.0" layoutY="438.0" mnemonicParsing="false" text="Add" />
-      <Button layoutX="65.0" layoutY="438.0" mnemonicParsing="false" text="Edit" />
-      <Button layoutX="142.0" layoutY="438.0" mnemonicParsing="false" text="Delete" />
-    </children>
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="99.0" text="James Smith">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="46.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label text="Manager" />
+                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 479-3444" />
+               </children></HBox>
+         </children>
+      </VBox>
+      <Separator prefWidth="200.0" />
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="190.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="102.0" text="Martin Kane">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="45.0" prefWidth="190.0">
+               <children>
+                  <Label text="Manager" />
+                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="141.0" text="    (256) 352-9765" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Separator prefWidth="200.0" />
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="102.0" text="Leah Bowman">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label text="Worker" />
+                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 541-4760" />
+               </children></HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="102.0" text="Jim Walter">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label text="Worker" />
+                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 772-1005" />
+               </children></HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="102.0" text="Felicity Jones">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label text="Worker" />
+                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 912-3725" />
+               </children></HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="102.0" text="Sammy Tucker">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label text="Worker" />
+                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 998-2263" />
+               </children></HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="102.0" text="Alison Redding">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0" />
+            <Label prefHeight="17.0" prefWidth="60.0" text="Worker" />
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="102.0" text="Elijah Reign">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0" />
+            <Label text="Worker" />
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="102.0" text="Zack Hancock">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label text="Worker" />
+               </children></HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="53.0" prefWidth="226.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="101.0" text="Shay Lim">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children></HBox>
+            <HBox prefHeight="28.0" prefWidth="213.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="61.0" text="Worker" />
+                  <Label text="(256) 655-0130" />
+               </children></HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="27.0" prefWidth="204.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="206.0" text="Add" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

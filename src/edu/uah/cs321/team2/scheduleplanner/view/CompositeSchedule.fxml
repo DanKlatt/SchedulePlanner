@@ -1,14 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="edu.uah.cs321.team2.scheduleplanner.TestingViewController">
-    <stylesheets>
-        <URL value="@scheduleplanner.css" />
-    </stylesheets>
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="root" stylesheets="@scheduleplanner.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141">
+  <columnConstraints>
+    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="60.0" percentWidth="9.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
    <children>
-      <Label layoutX="237.0" layoutY="192.0" text="Composite Schedule" />
+      <Label text="12:00 AM" GridPane.rowSpan="2" />
+      <Label text="4:00 AM" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+      <Label text="8:00 AM" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Label text="12:00 PM" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+      <Label text="4:00 PM" GridPane.rowIndex="8" GridPane.rowSpan="2" />
+      <Label text="8:00 PM" GridPane.rowIndex="10" GridPane.rowSpan="2" />
+      <Label text="11:00 PM" GridPane.rowIndex="12" GridPane.rowSpan="2" />
+      <Label text="Monday" GridPane.columnIndex="1" />
+      <Label text="Tuesday" GridPane.columnIndex="2" />
+      <Label text="Wednesday" GridPane.columnIndex="3" />
+      <Label text="Thursday" GridPane.columnIndex="4" />
+      <Label text="Friday" GridPane.columnIndex="5" />
+      <Label text="Saturday" GridPane.columnIndex="6" />
+      <Label text="Sunday" GridPane.columnIndex="7" />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="3">
+         <children>
+            <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
+            <Separator prefWidth="200.0" />
+            <Label styleClass="compositeShiftLabels" text="2">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </Label>
+            <Label styleClass="compositeShiftLabels" text="Workers">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <Label styleClass="compositeShiftLabels" text="8" />
+         </children>
+      </VBox>
    </children>
-</AnchorPane>
+</GridPane>
