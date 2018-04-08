@@ -1,3 +1,11 @@
 .root {
 
 }
+
+.compositeShift {
+    -fx-background-color: blue;
+}
+
+.compositeShiftLabels {
+    -fx-text-fill: white;
+}
