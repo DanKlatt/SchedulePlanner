@@ -16,7 +16,7 @@ public interface PersonDelegate {
     
     /**
      * Method for updating an existing person within the data store
-     * @param identifier The unique ID of the person to be updated
+     * @param identifier Unique ID of the person to be updated
      * @param updatedPerson The new information for the updated person
      */
     void editPersonWithID(int identifier, Person updatedPerson);
