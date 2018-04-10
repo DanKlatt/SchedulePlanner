@@ -16,14 +16,13 @@ public interface PersonDelegate {
     
     /**
      * Method for updating an existing person within the data store
-     * @param identifier Unique ID of the person to be updated
      * @param updatedPerson The new information for the updated person
      */
-    void editPersonWithID(int identifier, Person updatedPerson);
+    void editPersonWithID(Person updatedPerson);
     
     /**
      * Method to remove a person from the data store
-     * @param identifier Unique ID of the person to be removed from the data store
+     * @param person Person to be removed from the data store
      */
-    void deletePersonWithID(int identifier);
+    void deletePersonWithID(Person person);
 }
