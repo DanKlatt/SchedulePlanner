@@ -9,13 +9,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="27.0" prefWidth="99.0" text="James Smith">
+                  <Label id="personName_0" prefHeight="27.0" prefWidth="99.0" text="James Smith">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -25,17 +25,17 @@
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label text="Manager" />
-                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 479-3444" />
+                  <Label id="roleLabel_0" text="Manager" />
+                  <Label id="phoneLabel_0" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 479-3444" />
                </children></HBox>
          </children>
       </VBox>
       <Separator prefWidth="200.0" />
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="45.0" prefWidth="190.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="102.0" text="Martin Kane">
+                  <Label id="personName_1" prefHeight="18.0" prefWidth="102.0" text="Martin Kane">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -45,18 +45,18 @@
                </children></HBox>
             <HBox prefHeight="45.0" prefWidth="190.0">
                <children>
-                  <Label text="Manager" />
-                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="141.0" text="    (256) 352-9765" />
+                  <Label id="roleLabel_1" text="Manager" />
+                  <Label id="phoneLabel_1" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="141.0" text="    (256) 352-9765" />
                </children>
             </HBox>
          </children>
       </VBox>
       <Separator prefWidth="200.0" />
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="102.0" text="Leah Bowman">
+                  <Label id="personName_2" prefHeight="18.0" prefWidth="102.0" text="Leah Bowman">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -66,17 +66,17 @@
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label text="Worker" />
-                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 541-4760" />
+                  <Label id="roleLabel_2" text="Worker" />
+                  <Label id="phoneLabel_2" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 541-4760" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="102.0" text="Jim Walter">
+                  <Label id="personName_3" prefHeight="18.0" prefWidth="102.0" text="Jim Walter">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -86,17 +86,17 @@
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label text="Worker" />
-                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 772-1005" />
+                  <Label id="roleLabel_3" text="Worker" />
+                  <Label id="phoneLabel_3" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 772-1005" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="102.0" text="Felicity Jones">
+                  <Label id="personName_4" prefHeight="18.0" prefWidth="102.0" text="Felicity Jones">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -106,17 +106,17 @@
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label text="Worker" />
-                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 912-3725" />
+                  <Label id="roleLabel_4" text="Worker" />
+                  <Label id="roleLabel_4" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 912-3725" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="102.0" text="Sammy Tucker">
+                  <Label id="personName_5" prefHeight="18.0" prefWidth="102.0" text="Sammy Tucker">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -126,17 +126,17 @@
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label text="Worker" />
-                  <Label alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 998-2263" />
+                  <Label id="roleLabel_5" text="Worker" />
+                  <Label id="phoneLabel_5" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 998-2263" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="102.0" text="Alison Redding">
+                  <Label id="personName_6" prefHeight="18.0" prefWidth="102.0" text="Alison Redding">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -145,15 +145,15 @@
                   <Button mnemonicParsing="false" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0" />
-            <Label prefHeight="17.0" prefWidth="60.0" text="Worker" />
+            <Label id="roleLabel_6" prefHeight="17.0" prefWidth="60.0" text="Worker" />
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="102.0" text="Elijah Reign">
+                  <Label id="personName_7" prefHeight="18.0" prefWidth="102.0" text="Elijah Reign">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -162,15 +162,15 @@
                   <Button mnemonicParsing="false" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0" />
-            <Label text="Worker" />
+            <Label id="roleLabel_7" text="Worker" />
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="102.0" text="Zack Hancock">
+                  <Label id="personName_8" prefHeight="18.0" prefWidth="102.0" text="Zack Hancock">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -180,16 +180,16 @@
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label text="Worker" />
+                  <Label id="roleLabel_8" text="Worker" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0">
+      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="18.0" prefWidth="101.0" text="Shay Lim">
+                  <Label id="personName_9" prefHeight="18.0" prefWidth="101.0" text="Shay Lim">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -199,8 +199,8 @@
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
-                  <Label prefHeight="17.0" prefWidth="61.0" text="Worker" />
-                  <Label text="(256) 655-0130" />
+                  <Label id="roleLabel_9" prefHeight="17.0" prefWidth="61.0" text="Worker" />
+                  <Label id="phoneLabel_9" text="(256) 655-0130" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
