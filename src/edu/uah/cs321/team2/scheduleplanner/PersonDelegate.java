@@ -18,11 +18,11 @@ public interface PersonDelegate {
      * Method for updating an existing person within the data store
      * @param updatedPerson The new information for the updated person
      */
-    void editPersonWithID(Person updatedPerson);
+    void editPerson(Person updatedPerson);
     
     /**
      * Method to remove a person from the data store
      * @param person Person to be removed from the data store
      */
-    void deletePersonWithID(Person person);
+    void deletePerson(Person person);
 }

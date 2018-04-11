@@ -124,6 +124,7 @@ public class AddEditPersonController {
                 aPerson.setLastName(lName);
                 aPerson.setPhone(phone);
                 aPerson.setRole(role);
+                delegate.editPerson(aPerson);
             }
             
         }
