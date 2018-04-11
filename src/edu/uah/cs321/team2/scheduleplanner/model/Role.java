@@ -1,54 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author sameerawarsi
+ * @author Team 2
  */
 
 package edu.uah.cs321.team2.scheduleplanner.model;
 
 public class Role {
-    public static final int Type_Manager = 1;
-    public static final int Type_Worker = 0;
+    public static final int TYPE_MANAGER = 1;
+    public static final int TYPE_WORKER = 0;
     
     private String name;
-    private int type;
     
-    public Role() {
-        type = Type_Worker;
-        name = "Worker";
-    }
-
-    public Role(int Type) {
-        type = Type;
-        if(type==Type_Manager) {
-            name = "Manager";
+    public Role(int type) {
+        if(type==TYPE_MANAGER) {
+            this.name = "Manager";
         }
-        else if(type==Type_Worker) {
-            name = "Worker";
+        else {
+            this.name = "Worker";
         }
     }
     public String getName() {
         return name;
-    }
-    public void setRole(int type) {
-        if(type!= Type_Manager || 
-           type!= Type_Worker) {
-            System.out.println("Incorrect type for SetRole\n");
-            return;
-        }
-        if (type == Type_Manager) {
-            name = "Manager";
-        } else if (type == Type_Worker) {
-            name = "Worker";
-        }
-    }
-    //get role
-    public int getRole() {
-        return type;
     }
 }
