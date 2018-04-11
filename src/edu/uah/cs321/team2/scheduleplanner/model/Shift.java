@@ -58,7 +58,7 @@ public class Shift {
    public int getEndTime() {
        return endTime;
    }
-   /*
+   
    public ArrayList<Person> getPeople() {
        return (ArrayList<Person>) people.clone();
    }
@@ -72,9 +72,9 @@ public class Shift {
            people.remove(oldPerson);
        }
    }
-   */
+   
    private int day = 0;
    private int startTime = 0;
    private int endTime = 0;
-   //private ArrayList<Person> people = new ArrayList<Person>();
+   private ArrayList<Person> people = new ArrayList<>();
 }
