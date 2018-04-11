@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="edu.uah.cs321.team2.scheduleplanner.view.AddEditPersonController" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="278.0" prefWidth="497.0" VBox.vgrow="ALWAYS">
       <children>
@@ -24,8 +24,8 @@
                </toggleGroup>
             </RadioButton>
             <RadioButton id="manager" layoutX="285.0" layoutY="213.0" mnemonicParsing="false" text="Manager" toggleGroup="$role" />            
-            <Button layoutX="427.0" layoutY="303.0" mnemonicParsing="false" text="Save" />
-            <Button layoutX="502.0" layoutY="303.0" mnemonicParsing="false" text="Cancel" />            
+            <Button id="saveButton" layoutX="427.0" layoutY="303.0" mnemonicParsing="false" text="Save" onAction="#handleSaveButtonAction"/>
+            <Button id="cancelButton" layoutX="502.0" layoutY="303.0" mnemonicParsing="false" text="Cancel" onAction="#handleCancelButtonAction" />            
       </children>
     </AnchorPane>
   </children>
