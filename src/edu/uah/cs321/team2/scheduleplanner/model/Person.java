@@ -16,9 +16,19 @@ public class Person {
         this.lastName = lastName;
         this.phone = phone;
         this.role = role;
+        
+        //set this to something meaningful later. maybe to the date in millisecs
+        //so that the identifier is unique for each person
+        identifier=0;
     }
     public String getName(){
         return firstName + " " + lastName;
+    }
+    public String getFirstName(){
+        return firstName;
+    }
+    public String getLastName(){
+        return lastName;
     }
     public void setFirstName(String firstName){
         this.firstName = firstName;
@@ -38,10 +48,14 @@ public class Person {
     public void setRole(Role role){
         this.role = role;
     }
-          
+    public int getIdentifier(){
+        return identifier;
+    }
+              
     private String firstName;
     private String lastName;
     private String phone;
     private Role role;
+    private int identifier;
      
 }
