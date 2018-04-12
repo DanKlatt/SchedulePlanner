@@ -10,8 +10,8 @@ import edu.uah.cs321.team2.scheduleplanner.model.Shift;
 public interface ShiftDelegate {
     /**
      * Method for updating an existing shift within the data store
-     * @param identifier Unique ID of the shift to be updated
+     * 
      * @param updatedShift The new information for the shift to be updated
      */
-    void updateShiftWithID(int identifier, Shift updatedShift);
+    void updateShift(Shift updatedShift);
 }
