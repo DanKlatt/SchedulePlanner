@@ -18,20 +18,23 @@
     </headerText>
     <content>
         <GridPane vgap="10" hgap="10">
-            <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Shift Day: Monday"/>
-            <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="Shift Start: 08:00"/>
-            <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="Shift End: 12:00"/>
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Shift Day:" />
+            <Label fx:id="shiftDay" GridPane.rowIndex="0" GridPane.columnIndex="1" text="Shift Day: Monday"/>
+            <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="Shift Start:" />
+            <Label fx:id="shiftStart" GridPane.rowIndex="1" GridPane.columnIndex="1" text="Shift Start: 08:00"/>
+            <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="Shift End:" />
+            <Label fx:id="shiftEnd" GridPane.rowIndex="2" GridPane.columnIndex="1" text="Shift End: 12:00"/>
             
-            <CheckBox fx:id="personName_01" text="personName_01" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-            <CheckBox fx:id="personName_02" text="personName_02" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-            <CheckBox fx:id="personName_03" text="personName_03" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
-            <CheckBox fx:id="personName_04" text="personName_04" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
-            <CheckBox fx:id="personName_05" text="personName_05" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
-            <CheckBox fx:id="personName_06" text="personName_06" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
-            <CheckBox fx:id="personName_07" text="personName_07" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
-            <CheckBox fx:id="personName_08" text="personName_08" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
-            <CheckBox fx:id="personName_09" text="personName_09" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
-            <CheckBox fx:id="personName_10" text="personName_10" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="personName_0" text="personName_01" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="personName_2" text="personName_02" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="personName_4" text="personName_03" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="personName_6" text="personName_04" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="personName_8" text="personName_05" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="personName_1" text="personName_06" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="personName_3" text="personName_07" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="personName_5" text="personName_08" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="personName_7" text="personName_09" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="personName_9" text="personName_10" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
             
             <Button fx:id="saveButton" text="Save" GridPane.rowIndex="13" GridPane.columnIndex="0" onAction="#handleSave"/>
             <Button fx:id="cancelButton" text="Cancel" GridPane.rowIndex="13" GridPane.columnIndex="1" onAction="#handleCancel"/>
