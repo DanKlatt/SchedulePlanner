@@ -9,9 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
    <children>
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -31,7 +31,7 @@
          </children>
       </VBox>
       <Separator prefWidth="200.0" />
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="45.0" prefWidth="190.0">
                <children>
@@ -52,7 +52,7 @@
          </children>
       </VBox>
       <Separator prefWidth="200.0" />
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -72,7 +72,7 @@
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -92,7 +92,7 @@
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -112,7 +112,7 @@
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -132,7 +132,7 @@
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -144,12 +144,16 @@
                   <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button mnemonicParsing="false" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0" />
-            <Label id="roleLabel_6" prefHeight="17.0" prefWidth="60.0" text="Worker" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label id="roleLabel_6" prefHeight="17.0" prefWidth="202.0" text="Worker" />
+                  <Label id="phoneLabel_6" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="277.0" text="    (256) 998-2263" />
+               </children>
+            </HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -161,12 +165,16 @@
                   <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button mnemonicParsing="false" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0" />
-            <Label id="roleLabel_7" text="Worker" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label id="roleLabel_7" text="Worker" />
+                  <Label id="phoneLabel_7" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="121.0" text="    (256) 998-2263" />
+               </children>
+            </HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -181,11 +189,12 @@
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
                   <Label id="roleLabel_8" text="Worker" />
+                  <Label id="phoneLabel_8" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="152.0" text="    (256) 998-2263" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>

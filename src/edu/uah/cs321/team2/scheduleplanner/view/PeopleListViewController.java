@@ -1,19 +1,19 @@
 package edu.uah.cs321.team2.scheduleplanner.view;
 
 import edu.uah.cs321.team2.scheduleplanner.model.Person;
-import edu.uah.cs321.team2.scheduleplanner.model.Role;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.event.ActionEvent;
-//import javafx.fxml.Initializable;
-import javafx.scene.control.Alert.*;
+import javafx.scene.layout.VBox;
 
 public class PeopleListViewController {
     private int Type_Worker;
     private int Type_Manager;
     private Object People;
     
+    @FXML 
+    private VBox rootNode;
     //label for person's name
     @FXML
     private Label Name;
@@ -24,46 +24,74 @@ public class PeopleListViewController {
     @FXML
     private Label phoneNum;
     
+    @FXML 
+    private Button Edit;
+    
     @FXML
+    private Button Delete;
+    
+    @FXML
+    private Button Add;
+    
     //method to fill dummy data of people's information
-    //public void initialize {
-    //Role Manager = new Role(Type_Manager);
-    //Role Worker = new Role(Type_Worker);
-    //Person person1 = new Person("James Smith", "256-479-3444", Manager);
-    //Person person2 = new Person("Martin Kane", "256-352-9765", Manager);
-    //Person person3 = new Person("Leah Bowman", "256-541-4760", Worker);
-    //Person person4 = new Person("Jim Walter", "256-772-1005", Worker);
-    //Person person5 = new Person("Felicity Jones", "256-912-3725", Worker);
-    //Person person6 = new Person("Sammy Tucker", "256-998-2263", Worker);
-    //Person person7 = new Person("Alison Redding", "256-923-4567", Worker);
-    //Person person8 = new Person("James Smith", "256-321-2140", Worker);
-    //Person person9 = new Person("Zack Hancock", "256-555-0000", Worker);
-    //Person person10 = new Person("Shay Lim", "256-655-0130", Worker);
+       // People List setter
+    public void setAllPersons(ArrayList<Person> people) {
+        this.allPersons = people;
+    }
     
-    //People = new ArrayList<Person>();
-    //People.add(person1);
-    //People.add(person2);
-    //People.add(person3);
-    //People.add(person4);
-    //People.add(person5);
-    //People.add(person6);
-    //People.add(person7);
-    //People.add(person8);
-    //People.add(person9);
-    //People.add(person10);
+    @FXML
+    public void initialize() {
+        
+    }
     
-//}  
+    public void refreshView() {
+        // Gets the scene so node elements can be accessed
+        Scene scene = rootNode.getScene();
+        
+        if(this.allPersons.size() == 0) {
+            rootNode.setVisible(false);
+            return;
+        }
+        
+        rootNode.setVisible(true);
+        
+        // Loop through all persons array
+        for (int i = 0; i < this.allPersons.size(); i += 1) {
+            // Construct the identifier set in fx:id property
+            String identifier = "#personName_" + i;          
+            Label name = (Label) scene.lookup(identifier);
+
+            identifier = "#roleLabel_" + i;
+            Label role = (Label) scene.lookup(identifier);
+            
+            identifier = "#phoneLabel_" + i;
+            Label phone = (Label) scene.lookup(identifier);
+            
+            // Gets the person from the list of all people
+            Person staff = this.allPersons.get(i);
+            
+            // Set all necessary properties to corresponding person values
+            name.setText(staff.getName());
+            role.setText(staff.getRole());
+            phone.setText(staff.getPhone());
+        }
+    }
+
+
     public void EditPerson() {
         
 }
     public void AddPerson() {
     
 }
+    public void DeletePerson() {
+        
+    }
     public void GettingScene() {
     //    Scene scene = <rootNode>.getScene();
     }
     
-    
+    private ArrayList<Person> allPersons;
     
 }
     

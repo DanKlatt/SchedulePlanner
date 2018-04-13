@@ -1,6 +1,7 @@
 package edu.uah.cs321.team2.scheduleplanner;
 
 //import edu.uah.cs321.team2.scheduleplanner.view.EditShiftViewController;
+//import edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController;
 //import edu.uah.cs321.team2.scheduleplanner.model.Shift;
 //import edu.uah.cs321.team2.scheduleplanner.model.Person;
 //import edu.uah.cs321.team2.scheduleplanner.model.Role;
@@ -46,6 +47,9 @@ public class SchedulePlanner extends Application {
         
         stage.setScene(scene);
         stage.show();
+        
+ //       PeopleListViewController pcont = peopleLoader.getController();
+ //       pcont.refreshView();
         
         /*
         FXMLLoader testLoader = new FXMLLoader();
