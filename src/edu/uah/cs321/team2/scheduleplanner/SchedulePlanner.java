@@ -47,9 +47,7 @@ public class SchedulePlanner extends Application {
         
         stage.setScene(scene);
         stage.show();
-        
- //       PeopleListViewController pcont = peopleLoader.getController();
- //       pcont.refreshView();
+       
         
         /*
         FXMLLoader testLoader = new FXMLLoader();
