@@ -70,8 +70,45 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
         this.personListeners.add(newListener);
     }
     
+    /**
+     * Adds a shift listener to the collection of listeners to be notified when shift changes occur
+     * 
+     * @param newListener The new listener to be notified when changes to shifts occur
+     */
     public void addListenerToShiftListeners(ShiftListener newListener) {
         this.shiftListeners.add(newListener);
+    }
+    
+    public void createDefaultShifts() {
+        Shift monMorning = new Shift(Shift.Day.Monday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift monEvening = new Shift(Shift.Day.Monday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift tueMorning = new Shift(Shift.Day.Tuesday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift tueEvening = new Shift(Shift.Day.Tuesday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift wedMorning = new Shift(Shift.Day.Wednesday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift wedEvening = new Shift(Shift.Day.Wednesday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift thuMorning = new Shift(Shift.Day.Thursday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift thuEvening = new Shift(Shift.Day.Thursday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift friMorning = new Shift(Shift.Day.Friday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift friEvening = new Shift(Shift.Day.Friday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift satMorning = new Shift(Shift.Day.Monday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift satEvening = new Shift(Shift.Day.Monday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift sunMorning = new Shift(Shift.Day.Monday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift sunEvening = new Shift(Shift.Day.Monday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        
+        this.shifts.add(monMorning);
+        this.shifts.add(monEvening);
+        this.shifts.add(tueMorning);
+        this.shifts.add(tueEvening);
+        this.shifts.add(wedMorning);
+        this.shifts.add(wedEvening);
+        this.shifts.add(thuMorning);
+        this.shifts.add(thuEvening);
+        this.shifts.add(friMorning);
+        this.shifts.add(friEvening);
+        this.shifts.add(satMorning);
+        this.shifts.add(satEvening);
+        this.shifts.add(sunMorning);
+        this.shifts.add(sunEvening);
     }
     
     // Section for PersonDelegate methods

@@ -1,20 +1,15 @@
 package edu.uah.cs321.team2.scheduleplanner;
 
-//import edu.uah.cs321.team2.scheduleplanner.view.EditShiftViewController;
-//import edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController;
-import edu.uah.cs321.team2.scheduleplanner.model.Shift;
-//import edu.uah.cs321.team2.scheduleplanner.model.Person;
-//import edu.uah.cs321.team2.scheduleplanner.model.Role;
+import edu.uah.cs321.team2.scheduleplanner.view.CompositeScheduleViewController;
+import edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-//import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import edu.uah.cs321.team2.scheduleplanner.model.CompositeSchedule;
-//import java.util.ArrayList;
 
 /**
  *
@@ -26,29 +21,9 @@ public class SchedulePlanner extends Application {
     public void start(Stage stage) throws Exception {
         
         //create composite schedule instances and default shifts
-        CompositeSchedule compSched = new CompositeSchedule();
-        Shift monMorning = new Shift(Shift.Day.Monday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
-        Shift monEvening = new Shift(Shift.Day.Monday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
-        Shift tueMorning = new Shift(Shift.Day.Tuesday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
-        Shift tueEvening = new Shift(Shift.Day.Tuesday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
-        Shift wedMorning = new Shift(Shift.Day.Wednesday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
-        Shift wedEvening = new Shift(Shift.Day.Wednesday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
-        Shift thuMorning = new Shift(Shift.Day.Thursday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
-        Shift thuEvening = new Shift(Shift.Day.Thursday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
-        Shift friMorning = new Shift(Shift.Day.Friday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
-        Shift friEvening = new Shift(Shift.Day.Friday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
-        
-        compSched.addShiftToShifts(monMorning);
-        compSched.addShiftToShifts(monEvening);
-        compSched.addShiftToShifts(tueMorning);
-        compSched.addShiftToShifts(tueEvening);
-        compSched.addShiftToShifts(wedMorning);
-        compSched.addShiftToShifts(wedEvening);
-        compSched.addShiftToShifts(thuMorning);
-        compSched.addShiftToShifts(thuEvening);
-        compSched.addShiftToShifts(friMorning);
-        compSched.addShiftToShifts(friEvening);
-        
+        CompositeSchedule compositeSchedule = new CompositeSchedule();
+        // Just create defaults for now
+        compositeSchedule.createDefaultShifts();
         
         // Load root Border Pane
         FXMLLoader rootLoader = new FXMLLoader();
@@ -58,14 +33,21 @@ public class SchedulePlanner extends Application {
         // Load Composite Schedule view into center pane
         FXMLLoader compositeLoader = new FXMLLoader();
         compositeLoader.setLocation(SchedulePlanner.class.getResource("view/CompositeSchedule.fxml"));
-        GridPane compositeSchedule = (GridPane) compositeLoader.load();
+        GridPane compositeSchedulePane = (GridPane) compositeLoader.load();
         
-        root.setCenter(compositeSchedule);
+        CompositeScheduleViewController scheduleController = (CompositeScheduleViewController) compositeLoader.getController();
+        scheduleController.setCompositeSchedule(compositeSchedule);
+        
+        root.setCenter(compositeSchedulePane);
         
         // Load People List view into right pane
         FXMLLoader peopleLoader = new FXMLLoader();
         peopleLoader.setLocation(SchedulePlanner.class.getResource("view/PeopleList.fxml"));
         VBox peopleList = (VBox) peopleLoader.load();
+        
+        PeopleListViewController peopleController = (PeopleListViewController) peopleLoader.getController();
+        peopleController.setAllPersons(compositeSchedule.getPeople());
+        //peopleController.setPersonDelegate(compositeSchedule);
         
         root.setRight(peopleList);
         
@@ -73,7 +55,9 @@ public class SchedulePlanner extends Application {
         
         stage.setScene(scene);
         stage.show();
-       
+        
+        scheduleController.refreshView();
+        peopleController.refreshView();
         
         /*
         FXMLLoader testLoader = new FXMLLoader();
