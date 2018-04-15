@@ -18,11 +18,12 @@
             <TextField id="firstName" layoutX="191.0" layoutY="68.0" prefHeight="31.0" prefWidth="252.0" />
             <TextField id="lastName" layoutX="191.0" layoutY="112.0" prefHeight="31.0" prefWidth="252.0" />            
             <TextField id="phoneNum" layoutX="191.0" layoutY="153.0" prefHeight="31.0" prefWidth="252.0" />
-            <RadioButton id="Worker" layoutX="191.0" layoutY="213.0" mnemonicParsing="false" text="Worker">
-               <toggleGroup>
-                  <ToggleGroup fx:id="roles" />
-               </toggleGroup>
-            </RadioButton>
+            <fx:define>
+               <ToggleGroup fx:id="roles"/>
+            </fx:define> 
+            <RadioButton id="Worker" layoutX="191.0" layoutY="213.0" 
+                         mnemonicParsing="false" text="Worker" 
+                         toggleGroup="$roles" selected="true"/>
             <RadioButton id="Manager" layoutX="285.0" layoutY="213.0" mnemonicParsing="false" text="Manager" toggleGroup="$roles" />            
             <Button id="saveButton" layoutX="427.0" layoutY="303.0" mnemonicParsing="false" text="Save" onAction="#handleSaveButtonAction"/>
             <Button id="cancelButton" layoutX="502.0" layoutY="303.0" mnemonicParsing="false" text="Cancel" onAction="#handleCancelButtonAction" />            
