@@ -65,7 +65,7 @@ public class EditShiftViewController {
                 Person staff = this.allPersons.get(i);
                 // Set all necessary properties to corresponding person values
                 element.setText(staff.getName());
-                element.setId(Long.toString(staff.getIdentifier()));
+                element.getProperties().put(ID_KEY, Long.toString(staff.getIdentifier()));
                 // Check to see if this person is assigned to this shift
                 if (this.shift.getPeople().contains(staff)) {
                     element.setSelected(true);
@@ -96,7 +96,8 @@ public class EditShiftViewController {
             CheckBox element = (CheckBox) scene.lookup(identifier);
             if (element.isSelected()) {
                 // Get person identifier from ID field of checkbox
-                long personIdentifier = Long.parseLong(element.getId());
+                String identifierValue = (String) element.getProperties().get(ID_KEY);
+                long personIdentifier = Long.parseLong(identifierValue);
                 // Find person with identifier, add to shift
                 for(Person person : this.allPersons) {
                     if (person.getIdentifier() == personIdentifier) {
@@ -121,6 +122,7 @@ public class EditShiftViewController {
         stage.close();
     }
     
+    private static final String ID_KEY = "personIdentifier";
     private static final int MAX_PEOPLE = 10;
     private Shift shift;
     private ArrayList<Person> allPersons;
