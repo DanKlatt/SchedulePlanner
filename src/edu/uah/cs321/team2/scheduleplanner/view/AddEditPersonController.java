@@ -91,7 +91,7 @@ public class AddEditPersonController {
         selectedRadioButton = (RadioButton)roles.getSelectedToggle();
         
         //handles the case that any of the fields are empty -- see note above about selectedRadioButton, it may error
-        if (fName.isEmpty() || lName.isEmpty() || phone.isEmpty()) {
+        if (fName==null || lName.isEmpty() || phone.isEmpty()) {
             Alert alert = new Alert(AlertType.ERROR, "All fields require an entry.");
             alert.show();
         }
