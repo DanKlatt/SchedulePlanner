@@ -107,10 +107,10 @@ public class AddEditPersonController {
             roleName = selectedRadioButton.getText();
             
             if(roleName.equals("Worker")){
-                role = new Role(0);
+                role = new Role(Role.TYPE_WORKER);
             }
             else{
-                role = new Role(1);
+                role = new Role(Role.TYPE_MANAGER);
             }
             //check if aPerson is null and therefore in add mode
             if(aPerson==null){ 
