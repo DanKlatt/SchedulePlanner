@@ -54,8 +54,7 @@ public class EditShiftViewController {
         Label endLabel = (Label) scene.lookup("#shiftEnd");
         endLabel.setText(this.shift.getReadableEndTime());
         // Loop through all ten elements
-        int max_people = 10;
-        for (int i=0;i<max_people;i+=1) {
+        for (int i=0;i<MAX_PEOPLE;i+=1) {
             // Construct the identifier set in fx:id property
             String identifier = "#personName_" + i;
             // Get element with specified ID from scene
@@ -66,6 +65,7 @@ public class EditShiftViewController {
                 Person staff = this.allPersons.get(i);
                 // Set all necessary properties to corresponding person values
                 element.setText(staff.getName());
+                element.setId(Long.toString(staff.getIdentifier()));
                 // Check to see if this person is assigned to this shift
                 if (this.shift.getPeople().contains(staff)) {
                     element.setSelected(true);
@@ -84,9 +84,28 @@ public class EditShiftViewController {
     @FXML
     private void handleSave() {
         System.out.println("Save");
-        //this.shift.removeAllPeopleFromShift();
+        this.shift.removeAllPeopleFromShift();
         // TODO: add people back to shift
-        //this.delegate.updateShift(this.shift);
+        // Gets the scene so node elements can be accessed
+        Scene scene = rootNode.getScene();
+        // Loop through all ten elements
+        for (int i=0;i<MAX_PEOPLE;i+=1) {
+            // Construct the identifier set in fx:id property
+            String identifier = "#personName_" + i;
+            // Get element with specified ID from scene
+            CheckBox element = (CheckBox) scene.lookup(identifier);
+            if (element.isSelected()) {
+                // Get person identifier from ID field of checkbox
+                long personIdentifier = Long.parseLong(element.getId());
+                // Find person with identifier, add to shift
+                for(Person person : this.allPersons) {
+                    if (person.getIdentifier() == personIdentifier) {
+                        this.shift.addPersonToList(person);
+                    }
+                }
+            }
+        }
+        this.delegate.updateShift(this.shift);
         closeSelf();
     }
     
@@ -102,6 +121,7 @@ public class EditShiftViewController {
         stage.close();
     }
     
+    private static final int MAX_PEOPLE = 10;
     private Shift shift;
     private ArrayList<Person> allPersons;
     private ShiftDelegate delegate;
