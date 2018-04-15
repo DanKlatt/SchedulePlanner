@@ -2,7 +2,6 @@ package edu.uah.cs321.team2.scheduleplanner.view;
 
 import edu.uah.cs321.team2.scheduleplanner.SchedulePlanner;
 import edu.uah.cs321.team2.scheduleplanner.model.Person;
-import edu.uah.cs321.team2.scheduleplanner.view.AddEditPersonController;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -14,6 +13,12 @@ import javafx.stage.Stage;
 import javafx.stage.Modality;
 import javafx.geometry.Pos;
 
+/**
+ * View Controller Class to handle editing, adding, and deleting
+ * persons name, role, and phone number from list view of people 
+ * 
+ * @author Team 2
+ */
 public class PeopleListViewController {
     private int Type_Worker;
     private int Type_Manager;
@@ -21,34 +26,19 @@ public class PeopleListViewController {
     
     @FXML 
     private VBox rootNode;
-    //label for person's name
-    @FXML
-    private Label Name;
-    //label for person's role
-    @FXML
-    private Label role;
-    //label for person's phone number
-    @FXML
-    private Label phoneNum;
-    
-    @FXML 
-    private Button Edit;
-    
-    @FXML
-    private Button Delete;
-    
-    @FXML
-    private Button Add;
-    
-    //method to fill dummy data of people's information
-       // People List setter
-    public void setAllPersons(ArrayList<Person> people) {
-        this.allPersons = people;
-    }
     
     @FXML
     public void initialize() {
         
+    }
+    
+/**
+ * Setting the person's data from the array list of people to people list
+ * 
+ * @param people 
+ */
+    public void setAllPersons(ArrayList<Person> people) {
+        this.allPersons = people;
     }
     
     public void refreshView() {
@@ -58,7 +48,6 @@ public class PeopleListViewController {
             String identifier = "#vbox_" + i;
             VBox vbox = (VBox) scene.lookup(identifier);
             if(vbox == null)
-                System.out.println("here");
             vbox.setVisible(false);
         }
         
@@ -68,7 +57,8 @@ public class PeopleListViewController {
         VBox vboxa = (VBox) scene.lookup(ident);       
         if(this.allPersons.size() == 10) {
             vboxa.setVisible(false);
-        }else {
+        }
+        else {
             vboxa.setVisible(true);
         }
         
@@ -100,19 +90,17 @@ public class PeopleListViewController {
 
     public void EditPerson(ActionEvent event) { 
         //We know that this action is always by the press of an edit button
-        // so get the actual button
+        //so get the actual button
         Button btn = (Button) event.getSource();
         
-        //get the button ID as a string and convert
-        //to integer
+        //Get the button ID as a string and convert to integer
         String id = btn.getId();
         int i= Integer.parseInt(id);
         //System.out.println("Here " + i);
         
         Person e = null;
   
-        //get the actual person being edited
-        //by the index from the button id
+        //Get the actual person being edited by the index from the button id
         e = this.allPersons.get(i);
         //System.out.println("Here " + i);  
         
@@ -137,8 +125,8 @@ public class PeopleListViewController {
                  eCont.setPerson(e);
             }
             
-            //initializing the person for the controller
-            //(the initialize functions crashes so I have 
+            //Initializing the person for the controller
+            //(the initialize function crashes so I have 
             //temporarily commented it out)
             //eCont.initialize();
             
@@ -151,20 +139,20 @@ public class PeopleListViewController {
         }
     }
     public void AddPerson(ActionEvent event) {
-        //load the edit person GUI
+        //Load the edit person GUI
         FXMLLoader editpersonLoader = new FXMLLoader();
         editpersonLoader.setLocation(SchedulePlanner.class.getResource("view/EditPerson.fxml"));
         
-        //display a dialogue showing the Edit Person GUI
+        //Display a dialogue showing the Edit Person GUI
         Stage dialogStage = new Stage();
         dialogStage.initModality(Modality.WINDOW_MODAL);
 
-        //needed a try-catch block to make the compiler happy
+        //Needed a try-catch block to make the compiler happy
         try {
-            //get the VBox containing the GUI
+            //Get the VBox containing the GUI
             VBox vbox = (VBox) editpersonLoader.load();
             
-            //get the Edit Person controller
+            //Get the Edit Person controller
             AddEditPersonController eCont = editpersonLoader.getController();
       
             vbox.setAlignment(Pos.CENTER);
