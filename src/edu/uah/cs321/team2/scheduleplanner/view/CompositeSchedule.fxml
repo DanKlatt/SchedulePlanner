@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="compositeSchedule" stylesheets="@scheduleplanner.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="compositeSchedule" stylesheets="@scheduleplanner.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.CompositeScheduleViewController">
   <columnConstraints>
     <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="60.0" percentWidth="9.0" prefWidth="100.0" />
       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
@@ -56,11 +56,11 @@
       <Label text="Friday" GridPane.columnIndex="5" />
       <Label text="Saturday" GridPane.columnIndex="6" />
       <Label text="Sunday" GridPane.columnIndex="7" />
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.rowSpan="4">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.rowSpan="4" fx:id="compositeShift_0">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
+            <Label styleClass="compositeShiftLabels" text="2" fx:id="shiftManagers_0">
                <padding>
                   <Insets bottom="10.0" />
                </padding>
@@ -71,7 +71,7 @@
                </padding>
             </Label>
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label styleClass="compositeShiftLabels" text="8" fx:id="shiftWorkers_0"/>
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="1" GridPane.rowIndex="12" GridPane.rowSpan="4">

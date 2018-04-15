@@ -4,9 +4,10 @@ package edu.uah.cs321.team2.scheduleplanner.model;
  *
  * @author Roger Ellson
  */
+import java.io.Serializable;
 import java.util.*;
 
-public class Shift {
+public class Shift implements Serializable {
    public enum Day {
        Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday
    }
@@ -49,10 +50,19 @@ public class Shift {
    }
    
    public Shift(Day day, Hour startTime, Hour endTime) {
+       this(new Date().getTime(),day,startTime,endTime);
+   }
+   
+   public Shift(long id, Day day, Hour start, Hour end) {
+       this.identifier = id;
        this.day = day;
-       this.startTime = startTime;
-       this.endTime = endTime;
+       this.startTime = start;
+       this.endTime = end;
        this.people = new ArrayList<>();
+   }
+   
+   public long getIdentifier() {
+       return this.identifier;
    }
    
    public Day getDay(){
@@ -93,6 +103,25 @@ public class Shift {
        this.people = new ArrayList<>();
    }
    
+   public int getManagerCount() {
+       return 0;
+   }
+   
+   public int getWorkerCount() {
+       return 1;
+   }
+   
+   @Override
+   public String toString() {
+       return "Shift [shiftID=" + this.identifier
+               + ", shiftDay=" + this.day
+               + ", shiftStartTime=" + this.getReadableStartTime()
+               + ", shiftEndTime=" + this.getReadableEndTime()
+               + ", shiftPersons=" + this.people + "]";
+   }
+   
+   private static final long serialVersionUID = 4L;
+   private long identifier;
    private Day day;
    private Hour startTime;
    private Hour endTime;

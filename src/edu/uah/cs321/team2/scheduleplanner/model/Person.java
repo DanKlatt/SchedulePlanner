@@ -5,22 +5,27 @@
  */
 package edu.uah.cs321.team2.scheduleplanner.model;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
  *
  * @author Melissa
  */
-public class Person {
+public class Person implements Serializable {
 
     public Person(String firstName, String lastName, String phone, Role role){
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this(new Date().getTime(),firstName,lastName,phone,role);
+    }
+    
+    public Person(long id, String first, String last, String phone, Role role) {
+        this.identifier = id;
+        this.firstName = first;
+        this.lastName = last;
         this.phone = phone;
         this.role = role;
-        
-        //set this to something meaningful later. maybe to the date in millisecs
-        //so that the identifier is unique for each person
-        identifier=0;
     }
+    
     public String getName(){
         return firstName + " " + lastName;
     }
@@ -48,14 +53,24 @@ public class Person {
     public void setRole(Role role){
         this.role = role;
     }
-    public int getIdentifier(){
+    public long getIdentifier(){
         return identifier;
     }
-              
+    
+    @Override
+    public String toString() {
+        return "Person [personID=" + this.identifier
+                + ", personFirstName=" + this.firstName
+                + ", personLastName=" + this.lastName
+                + ", personPhone=" + this.phone
+                + ", personRole=" + this.role + "]";
+    }
+    
+    private static final long serialVersionUID = 2L;
     private String firstName;
     private String lastName;
     private String phone;
     private Role role;
-    private int identifier;
+    private long identifier;
      
 }
