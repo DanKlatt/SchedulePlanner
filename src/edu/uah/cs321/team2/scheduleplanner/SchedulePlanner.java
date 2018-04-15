@@ -2,7 +2,7 @@ package edu.uah.cs321.team2.scheduleplanner;
 
 //import edu.uah.cs321.team2.scheduleplanner.view.EditShiftViewController;
 //import edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController;
-//import edu.uah.cs321.team2.scheduleplanner.model.Shift;
+import edu.uah.cs321.team2.scheduleplanner.model.Shift;
 //import edu.uah.cs321.team2.scheduleplanner.model.Person;
 //import edu.uah.cs321.team2.scheduleplanner.model.Role;
 import javafx.application.Application;
@@ -13,6 +13,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import edu.uah.cs321.team2.scheduleplanner.model.CompositeSchedule;
 //import java.util.ArrayList;
 
 /**
@@ -23,6 +24,31 @@ public class SchedulePlanner extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        
+        //create composite schedule instances and default shifts
+        CompositeSchedule compSched = new CompositeSchedule();
+        Shift monMorning = new Shift(Shift.Day.Monday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
+        Shift monEvening = new Shift(Shift.Day.Monday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
+        Shift tueMorning = new Shift(Shift.Day.Tuesday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
+        Shift tueEvening = new Shift(Shift.Day.Tuesday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
+        Shift wedMorning = new Shift(Shift.Day.Wednesday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
+        Shift wedEvening = new Shift(Shift.Day.Wednesday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
+        Shift thuMorning = new Shift(Shift.Day.Thursday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
+        Shift thuEvening = new Shift(Shift.Day.Thursday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
+        Shift friMorning = new Shift(Shift.Day.Friday, Shift.Hour.FOUR, Shift.Hour.TWELVE);
+        Shift friEvening = new Shift(Shift.Day.Friday, Shift.Hour.TWELVE, Shift.Hour.EIGHT);
+        
+        compSched.addShiftToShifts(monMorning);
+        compSched.addShiftToShifts(monEvening);
+        compSched.addShiftToShifts(tueMorning);
+        compSched.addShiftToShifts(tueEvening);
+        compSched.addShiftToShifts(wedMorning);
+        compSched.addShiftToShifts(wedEvening);
+        compSched.addShiftToShifts(thuMorning);
+        compSched.addShiftToShifts(thuEvening);
+        compSched.addShiftToShifts(friMorning);
+        compSched.addShiftToShifts(friEvening);
+        
         
         // Load root Border Pane
         FXMLLoader rootLoader = new FXMLLoader();
