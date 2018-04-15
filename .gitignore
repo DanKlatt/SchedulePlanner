@@ -17,3 +17,10 @@ nbproject/private/private.xml
 nbproject/private/retriever/catalog.xml
 
 nbproject/private/retriever/www.oracle.com/technetwork/java/javase/overview/index.html
+.DS_Store
+src/.DS_Store
+src/edu/.DS_Store
+src/edu/uah/.DS_Store
+src/edu/uah/cs321/.DS_Store
+src/edu/uah/cs321/team2/.DS_Store
+src/edu/uah/cs321/team2/scheduleplanner/.DS_Store
