@@ -1,7 +1,9 @@
 package edu.uah.cs321.team2.scheduleplanner.view;
 
 import edu.uah.cs321.team2.scheduleplanner.SchedulePlanner;
+import edu.uah.cs321.team2.scheduleplanner.PersonDelegate;
 import edu.uah.cs321.team2.scheduleplanner.model.Person;
+import edu.uah.cs321.team2.scheduleplanner.PersonListener;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -19,7 +21,7 @@ import javafx.geometry.Pos;
  * 
  * @author Team 2
  */
-public class PeopleListViewController {
+public class PeopleListViewController implements PersonListener {
     private int Type_Worker;
     private int Type_Manager;
     private Object People;
@@ -31,7 +33,10 @@ public class PeopleListViewController {
     public void initialize() {
         
     }
-    
+        // Delegate setter
+    public void setDelegate(PersonDelegate newDelegate) {
+        this.delegate = newDelegate;
+    }
 /**
  * Setting the person's data from the array list of people to people list
  * 
@@ -63,28 +68,32 @@ public class PeopleListViewController {
         }
         
         // Loop through all persons array
-        for (int i = 0; i < this.allPersons.size(); i += 1) {
+        for (int i = 0; i < MAX_PEOPLE; i += 1) {
             // Construct the identifier set in fx:id property
             String identifier = "#vbox_" + i;
             VBox vbox = (VBox) scene.lookup(identifier);
-            vbox.setVisible(true);
-            
-            identifier = "#personName_" + i;          
-            Label name = (Label) scene.lookup(identifier);
-            
-            identifier = "#roleLabel_" + i;
-            Label role = (Label) scene.lookup(identifier);
-            
-            identifier = "#phoneLabel_" + i;
-            Label phone = (Label) scene.lookup(identifier);
-            
-            // Gets the person from the list of all people
-            Person staff = this.allPersons.get(i);
-            
-            // Set all necessary properties to corresponding person values
-            name.setText(staff.getName());
-            role.setText(staff.getRole());
-            phone.setText(staff.getPhone());
+
+            if (i < this.allPersons.size()) {
+                vbox.setVisible(true);
+                identifier = "#personName_" + i;
+                Label name = (Label) scene.lookup(identifier);
+
+                identifier = "#roleLabel_" + i;
+                Label role = (Label) scene.lookup(identifier);
+
+                identifier = "#phoneLabel_" + i;
+                Label phone = (Label) scene.lookup(identifier);
+
+                // Gets the person from the list of all people
+                Person staff = this.allPersons.get(i);
+
+                // Set all necessary properties to corresponding person values
+                name.setText(staff.getName());
+                role.setText(staff.getRole());
+                phone.setText(staff.getPhone());
+            } else {
+                vbox.setVisible(false);
+            }
         }
     }
 
@@ -137,6 +146,9 @@ public class PeopleListViewController {
         }
             catch(Exception e1) {
         }
+        
+        this.delegate.editPerson(e);
+        this.refreshView();
     }
     public void AddPerson(ActionEvent event) {
         //Load the edit person GUI
@@ -163,13 +175,39 @@ public class PeopleListViewController {
             catch(Exception e1) {
         }   
         
+    //    this.delegate.addPerson(newPerson);
         this.refreshView();
     }
-    public void DeletePerson() {
+    public void DeletePerson(ActionEvent event) { 
+        //Get the delete button
+        Button btn = (Button) event.getSource();
         
+        //Get the button ID as a string and convert to integer
+        String id = btn.getId();
+        int i= Integer.parseInt(id);
+        //System.out.println("Here " + i);
+        
+        Person e = null;
+  
+        //Get the actual person being deleted by the index from the button id
+        e = this.allPersons.get(i);
+        
+        this.delegate.deletePerson(e);
+        
+        //this.allPersons.remove(i);
+        
+        //this.refreshView();
     }
     
-    private ArrayList<Person> allPersons;
+    @Override
+    public void peopleUpdated()
+    {
+        this.refreshView();
+    }
     
+    private static final String ID_KEY = "personIdentifier";
+    private ArrayList<Person> allPersons;
+    private PersonDelegate delegate;
+    private static final int MAX_PEOPLE = 10;    
 }
     
