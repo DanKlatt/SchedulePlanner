@@ -23,7 +23,7 @@ public class SchedulePlanner extends Application {
         //create composite schedule instances and default shifts
         CompositeSchedule compositeSchedule = new CompositeSchedule();
         // Just create defaults for now
-        compositeSchedule.createDefaultShifts();
+        //compositeSchedule.createDefaultShifts();
         
         // Load root Border Pane
         FXMLLoader rootLoader = new FXMLLoader();
@@ -36,17 +36,17 @@ public class SchedulePlanner extends Application {
         GridPane compositeSchedulePane = (GridPane) compositeLoader.load();
         
         CompositeScheduleViewController scheduleController = (CompositeScheduleViewController) compositeLoader.getController();
-        scheduleController.setCompositeSchedule(compositeSchedule);
+        //scheduleController.setCompositeSchedule(compositeSchedule);
         
         root.setCenter(compositeSchedulePane);
-        
+                
         // Load People List view into right pane
         FXMLLoader peopleLoader = new FXMLLoader();
         peopleLoader.setLocation(SchedulePlanner.class.getResource("view/PeopleList.fxml"));
         VBox peopleList = (VBox) peopleLoader.load();
         
         PeopleListViewController peopleController = (PeopleListViewController) peopleLoader.getController();
-        peopleController.setAllPersons(compositeSchedule.getPeople());
+        //peopleController.setAllPersons(compositeSchedule.getPeople());
         //peopleController.setPersonDelegate(compositeSchedule);
         
         root.setRight(peopleList);
@@ -56,8 +56,8 @@ public class SchedulePlanner extends Application {
         stage.setScene(scene);
         stage.show();
         
-        scheduleController.refreshView();
-        peopleController.refreshView();
+        //scheduleController.refreshView();
+        //peopleController.refreshView();
         
         /*
         FXMLLoader testLoader = new FXMLLoader();
