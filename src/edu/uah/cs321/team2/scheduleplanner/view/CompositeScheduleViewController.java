@@ -1,6 +1,7 @@
 package edu.uah.cs321.team2.scheduleplanner.view;
 
 import edu.uah.cs321.team2.scheduleplanner.PersonListener;
+import edu.uah.cs321.team2.scheduleplanner.ShiftListener;
 import edu.uah.cs321.team2.scheduleplanner.model.CompositeSchedule;
 import edu.uah.cs321.team2.scheduleplanner.model.Shift;
 import java.io.IOException;
@@ -20,7 +21,7 @@ import javafx.stage.Stage;
  *
  * @author Team 2
  */
-public class CompositeScheduleViewController implements PersonListener {
+public class CompositeScheduleViewController implements PersonListener, ShiftListener {
     @FXML
     private GridPane scheduleRootNode;
     
@@ -60,6 +61,12 @@ public class CompositeScheduleViewController implements PersonListener {
     // PersonListener methods
     @Override
     public void peopleUpdated() {
+        this.refreshView();
+    }
+    
+    // ShiftListener methods
+    @Override
+    public void shiftsUpdated() {
         this.refreshView();
     }
     

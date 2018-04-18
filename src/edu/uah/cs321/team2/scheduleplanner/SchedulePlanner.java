@@ -56,6 +56,10 @@ public class SchedulePlanner extends Application {
         stage.setScene(scene);
         stage.show();
         
+        compositeSchedule.addListenerToPersonListeners(scheduleController);
+        compositeSchedule.addListenerToShiftListeners(scheduleController);
+        compositeSchedule.addListenerToPersonListeners(peopleController);
+        
         scheduleController.refreshView();
         peopleController.refreshView();
     }
