@@ -139,6 +139,9 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
         // Replace Person in people
         if (index != UNKNOWN_INDEX) {
             this.people.set(index, updatedPerson);
+            for (Shift shift : this.shifts) {
+                shift.changePersonInList(updatedPerson);
+            }
             this.notifyPersonListeners();
         }
     }
@@ -150,6 +153,9 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
         // Remove Person from people
         if (index != UNKNOWN_INDEX) {
             this.people.remove(index);
+            for (Shift shift : this.shifts) {
+                shift.removePersonFromList(person);
+            }
             this.notifyPersonListeners();
         }
     }
