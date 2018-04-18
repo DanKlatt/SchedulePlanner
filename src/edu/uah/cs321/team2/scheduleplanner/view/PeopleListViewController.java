@@ -130,35 +130,11 @@ public class PeopleListViewController implements PersonListener {
                     thePerson = person;
                     break;
                 }
-            }
-<<<<<<< HEAD
-        }
-        //Get the actual person being edited by the index from the button id
-        // e = this.allPersons.get(i);
-        //System.out.println("Here " + i);  
-        
-        //load the edit person GUI
-        FXMLLoader editpersonLoader = new FXMLLoader();
-        editpersonLoader.setLocation(SchedulePlanner.class.getResource("view/AddEditPerson.fxml"));
-        
-        //display a dialogue showing the Edit Person GUI
-        Stage dialogStage = new Stage();
-        dialogStage.initModality(Modality.WINDOW_MODAL);
-
-        //needed a try-catch block to make the compiler happy
-        try {
-            //get the VBox containing the GUI
-            VBox vbox = (VBox) editpersonLoader.load();
-            
-            //get the Edit Person controller
-            AddEditPersonController eCont = editpersonLoader.getController();
-=======
-                        
+            }              
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(PeopleListViewController.class.getResource("AddEditPerson.fxml"));
             VBox page = (VBox) loader.load();
->>>>>>> 98641abc8e1c5f58a2534b77accae18dd1d0db0b
-            
+
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Edit Person");
             dialogStage.initModality(Modality.WINDOW_MODAL);
