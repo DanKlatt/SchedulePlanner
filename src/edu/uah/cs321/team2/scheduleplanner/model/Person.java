@@ -10,7 +10,7 @@ import java.util.Date;
 public class Person implements Serializable {
 
     public Person(String firstName, String lastName, String phone, Role role){
-        this(Person.counter++,firstName,lastName,phone,role);
+        this(new Date().getTime(),firstName,lastName,phone,role);
     }
     
     public Person(long id, String first, String last, String phone, Role role) {
@@ -61,7 +61,6 @@ public class Person implements Serializable {
                 + ", personRole=" + this.role + "]";
     }
     
-    private static long counter = 1;
     private static final long serialVersionUID = 2L;
     private String firstName;
     private String lastName;
