@@ -94,20 +94,20 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
     }
     
     public void createDefaultShifts() {
-        Shift monMorning = new Shift(Shift.Day.Monday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift monEvening = new Shift(Shift.Day.Monday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
-        Shift tueMorning = new Shift(Shift.Day.Tuesday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift tueEvening = new Shift(Shift.Day.Tuesday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
-        Shift wedMorning = new Shift(Shift.Day.Wednesday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift wedEvening = new Shift(Shift.Day.Wednesday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
-        Shift thuMorning = new Shift(Shift.Day.Thursday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift thuEvening = new Shift(Shift.Day.Thursday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
-        Shift friMorning = new Shift(Shift.Day.Friday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift friEvening = new Shift(Shift.Day.Friday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
-        Shift satMorning = new Shift(Shift.Day.Saturday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift satEvening = new Shift(Shift.Day.Saturday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
-        Shift sunMorning = new Shift(Shift.Day.Sunday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift sunEvening = new Shift(Shift.Day.Sunday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift monMorning = new Shift(1L, Shift.Day.Monday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift monEvening = new Shift(2L, Shift.Day.Monday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift tueMorning = new Shift(3L, Shift.Day.Tuesday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift tueEvening = new Shift(4L, Shift.Day.Tuesday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift wedMorning = new Shift(5L, Shift.Day.Wednesday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift wedEvening = new Shift(6L, Shift.Day.Wednesday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift thuMorning = new Shift(7L, Shift.Day.Thursday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift thuEvening = new Shift(8L, Shift.Day.Thursday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift friMorning = new Shift(9L, Shift.Day.Friday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift friEvening = new Shift(10L, Shift.Day.Friday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift satMorning = new Shift(11L, Shift.Day.Saturday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift satEvening = new Shift(12L, Shift.Day.Saturday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift sunMorning = new Shift(13L, Shift.Day.Sunday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift sunEvening = new Shift(14L, Shift.Day.Sunday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
         
         this.shifts.add(monMorning);
         this.shifts.add(monEvening);
