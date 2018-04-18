@@ -213,7 +213,7 @@
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_add" prefHeight="27.0" prefWidth="204.0" visible="false">
+      <VBox id="vbox_add" prefHeight="27.0" prefWidth="204.0">
          <children>
             <Button id="100" alignment="CENTER" mnemonicParsing="false" onAction="#AddPerson" prefHeight="27.0" prefWidth="206.0" text="Add" />
          </children>
