@@ -78,6 +78,11 @@ public class AddEditPersonController {
     public void setPerson(Person person){
         this.aPerson = person;
     }
+    
+    public void setDelegate(PersonDelegate delegate) {
+        this.delegate = delegate;
+    }
+    
     //function to handle when the save button is pressed
     @FXML
     public void handleSaveButtonAction(ActionEvent event) {
@@ -111,6 +116,7 @@ public class AddEditPersonController {
                 //send the data out
                 aPerson = new Person(fName, lName, phone, role);
                 delegate.addPerson(aPerson);
+                closeSelf();
             }
             //case that the aPerson was set and therefore in edit mode
             else{
@@ -119,6 +125,7 @@ public class AddEditPersonController {
                 aPerson.setPhone(phone);
                 aPerson.setRole(role);
                 delegate.editPerson(aPerson);
+                closeSelf();
             }
             
         }
@@ -126,9 +133,13 @@ public class AddEditPersonController {
     
     //function to handle when the save button is pressed
     @FXML
-    private void handleCancelButtonAction(ActionEvent event){
-    //make this action act like pressing the x button
-        ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+    private void handleCancelButtonAction(){
+        closeSelf();
+    }
+    
+    private void closeSelf() {
+        Stage stage  = (Stage) firstName.getScene().getWindow();
+        stage.close();
     }
 
     

@@ -84,7 +84,6 @@ public class EditShiftViewController {
     // Save action
     @FXML
     private void handleSave() {
-        System.out.println("Save");
         this.shift.removeAllPeopleFromShift();
         // Gets the scene so node elements can be accessed
         Scene scene = rootNode.getScene();

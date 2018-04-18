@@ -4,6 +4,7 @@ import edu.uah.cs321.team2.scheduleplanner.SchedulePlanner;
 import edu.uah.cs321.team2.scheduleplanner.PersonDelegate;
 import edu.uah.cs321.team2.scheduleplanner.model.Person;
 import edu.uah.cs321.team2.scheduleplanner.PersonListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -188,32 +189,23 @@ public class PeopleListViewController implements PersonListener {
      * @param event is the ActionEvent
      */
     public void AddPerson(ActionEvent event) {
-        //Load the edit person GUI
-        FXMLLoader editpersonLoader = new FXMLLoader();
-        editpersonLoader.setLocation(SchedulePlanner.class.getResource("view/EditPerson.fxml"));
-        
-        //Display a dialogue showing the Edit Person GUI
-        Stage dialogStage = new Stage();
-        dialogStage.initModality(Modality.WINDOW_MODAL);
-
-        //Needed a try-catch block to make the compiler happy
         try {
-            //Get the VBox containing the GUI
-            VBox vbox = (VBox) editpersonLoader.load();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PeopleListViewController.class.getResource("AddEditPerson.fxml"));
+            VBox page = (VBox) loader.load();
             
-            //Get the Edit Person controller
-            AddEditPersonController eCont = editpersonLoader.getController();
-      
-            vbox.setAlignment(Pos.CENTER);
-
-            dialogStage.setScene(new Scene(vbox));
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Add Person");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(rootNode.getScene().getWindow());
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+            
+            AddEditPersonController controller = loader.getController();
+            controller.setDelegate(this.delegate);
+            
             dialogStage.show();
-        }
-            catch(Exception e1) {
-        }   
-        
-    //    this.delegate.addPerson(newPerson);
-        this.refreshView();
+        } catch (IOException e) {}
     }
     
     /**

@@ -20,8 +20,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="27.0" prefWidth="46.0" text="Edit" />
-                  <Button id="0" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="27.0" prefWidth="46.0" text="Edit" />
+                  <Button id="delete_0" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -40,8 +40,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="1" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="1" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_1" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_1" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="45.0" prefWidth="190.0">
                <children>
@@ -61,8 +61,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="2" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="2" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_2" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_2" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -81,8 +81,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="3" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="3" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_3" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_3" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -101,8 +101,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="4" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="4" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_4" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_4" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -121,8 +121,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="5" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="5" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_5" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_5" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -141,8 +141,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="6" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="6" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_6" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_6" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -162,8 +162,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="7" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="7" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_7" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_7" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -182,8 +182,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="8" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="8" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_8" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_8" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -202,8 +202,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="9" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
-                  <Button id="9" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_9" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
+                  <Button id="delete_9" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
