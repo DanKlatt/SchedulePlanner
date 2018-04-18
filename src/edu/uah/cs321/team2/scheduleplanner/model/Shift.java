@@ -99,6 +99,17 @@ public class Shift implements Serializable {
        }
    }
    
+   public void changePersonInList(Person updatedPerson) {
+       if(!people.isEmpty()) {
+           for(Person person : this.people) {
+               if(person.getIdentifier() == updatedPerson.getIdentifier()) {
+                   int index = this.people.indexOf(person);
+                   this.people.set(index, updatedPerson);
+               }
+           }
+       }
+   }
+   
    public void removeAllPeopleFromShift() {
        this.people = new ArrayList<>();
    }

@@ -119,27 +119,19 @@ public class PeopleListViewController implements PersonListener {
  * @param event is the ActionEvent
  */
     public void EditPerson(ActionEvent event) { 
-        //We know that this action is always by the press of an edit button
-        //so get the actual button
-        Button btn = (Button) event.getSource();
-        
-        //Get the button ID as a string and convert to integer
-    //    String id = btn.getId();
-    //    int i= Integer.parseInt(id);
-        //System.out.println("Here " + i);
-        
-        Person e = null;
-        // Retrieve the ID_KEY from the edit button
-        String identifierValue = (String) btn.getProperties().get(ID_KEY);
-        // Convert the identifier value string to a long to get the actual identifier
-        // of the person associated with this edit key
-        long personIdentifier = Long.parseLong(identifierValue);
-        // Find person with identifier
-        for (Person person : this.allPersons) {
-            if (person.getIdentifier() == personIdentifier) {
-                e = person;
-                break;
+      
+      try {
+            //get the button that was pressed, get the id and find the person
+            Button selectedButton = (Button)event.getSource();
+            long personID = Long.parseLong((String) selectedButton.getProperties().get(ID_KEY));
+            Person thePerson = null;
+            for(Person person : this.allPersons) {
+                if (person.getIdentifier() == personID) {
+                    thePerson = person;
+                    break;
+                }
             }
+<<<<<<< HEAD
         }
         //Get the actual person being edited by the index from the button id
         // e = this.allPersons.get(i);
@@ -160,29 +152,28 @@ public class PeopleListViewController implements PersonListener {
             
             //get the Edit Person controller
             AddEditPersonController eCont = editpersonLoader.getController();
+=======
+                        
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PeopleListViewController.class.getResource("AddEditPerson.fxml"));
+            VBox page = (VBox) loader.load();
+>>>>>>> 98641abc8e1c5f58a2534b77accae18dd1d0db0b
             
-            if(e != null) {
-                //setting the person for the controller
-                 eCont.setPerson(e);
-            }
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Edit Person");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(rootNode.getScene().getWindow());
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
             
-            //Initializing the person for the controller
-            //(the initialize function crashes so I have 
-            //temporarily commented it out)
-            //eCont.initialize();
+            AddEditPersonController controller = loader.getController();
+            controller.setDelegate(this.delegate);
             
-            vbox.setAlignment(Pos.CENTER);
-
-            dialogStage.setScene(new Scene(vbox));
             dialogStage.show();
-        }
-            catch(Exception e1) {
-        }
-        
-        if(e != null) {
-            this.delegate.editPerson(e);
-            this.refreshView();
-        }
+            controller.setPerson(thePerson);
+            controller.refreshView();
+        } 
+      catch (IOException e) {}
     }
     
     /**

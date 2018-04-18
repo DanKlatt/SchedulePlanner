@@ -60,7 +60,11 @@ public class AddEditPersonController {
     
        
     @FXML
-    public void initialize() {
+    public void initialize(){
+    
+    }
+    
+    public void refreshView() {
         //the case that a person was 
         if(aPerson != null){
             firstName.setText(aPerson.getFirstName());
@@ -75,6 +79,7 @@ public class AddEditPersonController {
             }
         }
     }
+    
     public void setPerson(Person person){
         this.aPerson = person;
     }
