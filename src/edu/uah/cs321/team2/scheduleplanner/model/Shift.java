@@ -50,7 +50,7 @@ public class Shift implements Serializable {
    }
    
    public Shift(Day day, Hour startTime, Hour endTime) {
-       this(new Date().getTime(),day,startTime,endTime);
+       this(Shift.counter++,day,startTime,endTime);
    }
    
    public Shift(long id, Day day, Hour start, Hour end) {
@@ -132,6 +132,7 @@ public class Shift implements Serializable {
                + ", shiftPersons=" + this.people + "]";
    }
    
+   private static long counter = 1;
    private static final long serialVersionUID = 4L;
    private long identifier;
    private Day day;
