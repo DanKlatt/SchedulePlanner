@@ -104,10 +104,10 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
         Shift thuEvening = new Shift(Shift.Day.Thursday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
         Shift friMorning = new Shift(Shift.Day.Friday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
         Shift friEvening = new Shift(Shift.Day.Friday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
-        Shift satMorning = new Shift(Shift.Day.Monday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift satEvening = new Shift(Shift.Day.Monday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
-        Shift sunMorning = new Shift(Shift.Day.Monday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
-        Shift sunEvening = new Shift(Shift.Day.Monday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift satMorning = new Shift(Shift.Day.Saturday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift satEvening = new Shift(Shift.Day.Saturday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
+        Shift sunMorning = new Shift(Shift.Day.Sunday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
+        Shift sunEvening = new Shift(Shift.Day.Sunday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
         
         this.shifts.add(monMorning);
         this.shifts.add(monEvening);
