@@ -39,7 +39,7 @@ public class SchedulePlanner extends Application {
         scheduleController.setCompositeSchedule(compositeSchedule);
         
         root.setCenter(compositeSchedulePane);
-        
+                
         // Load People List view into right pane
         FXMLLoader peopleLoader = new FXMLLoader();
         peopleLoader.setLocation(SchedulePlanner.class.getResource("view/PeopleList.fxml"));
@@ -47,7 +47,7 @@ public class SchedulePlanner extends Application {
         
         PeopleListViewController peopleController = (PeopleListViewController) peopleLoader.getController();
         peopleController.setAllPersons(compositeSchedule.getPeople());
-        //peopleController.setPersonDelegate(compositeSchedule);
+        peopleController.setDelegate(compositeSchedule);
         
         root.setRight(peopleList);
         
