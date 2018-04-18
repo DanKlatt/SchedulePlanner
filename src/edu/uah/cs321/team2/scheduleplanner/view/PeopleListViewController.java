@@ -15,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.stage.Modality;
 import javafx.geometry.Pos;
+import java.util.Optional;
 
 /**
  * View Controller Class to handle editing, adding, and deleting
@@ -146,7 +147,7 @@ public class PeopleListViewController implements PersonListener {
         
         //load the edit person GUI
         FXMLLoader editpersonLoader = new FXMLLoader();
-        editpersonLoader.setLocation(SchedulePlanner.class.getResource("view/EditPerson.fxml"));
+        editpersonLoader.setLocation(SchedulePlanner.class.getResource("view/AddEditPerson.fxml"));
         
         //display a dialogue showing the Edit Person GUI
         Stage dialogStage = new Stage();
@@ -238,10 +239,16 @@ public class PeopleListViewController implements PersonListener {
                 break;
             }
         }
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Delete Person");
+        alert.setContentText("Are you sure?  Press OK to confirm, or cancel to Back out.");
+        Optional<ButtonType> result = alert.showAndWait();
         
-        if(e != null) {
+        if (result.isPresent() && (result.get() == ButtonType.OK))  {
+             if(e != null) {
             this.delegate.deletePerson(e);
             this.refreshView();
+             }
         }
     }
     
