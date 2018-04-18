@@ -74,6 +74,7 @@ public class EditShiftViewController {
                 }
             } else {
                 // Hide any extra chackboxes
+                element.setSelected(false);
                 element.setVisible(false);
             }
             
@@ -85,7 +86,6 @@ public class EditShiftViewController {
     private void handleSave() {
         System.out.println("Save");
         this.shift.removeAllPeopleFromShift();
-        // TODO: add people back to shift
         // Gets the scene so node elements can be accessed
         Scene scene = rootNode.getScene();
         // Loop through all ten elements
@@ -113,7 +113,6 @@ public class EditShiftViewController {
     // Cancel action
     @FXML
     private void handleCancel() {
-        System.out.println("Cancel");
         closeSelf();
     }
     

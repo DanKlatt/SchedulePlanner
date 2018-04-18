@@ -2,7 +2,7 @@ package edu.uah.cs321.team2.scheduleplanner.model;
 
 /**
  *
- * @author Roger Ellson
+ * @author Team 2
  */
 import java.io.Serializable;
 import java.util.*;
@@ -86,7 +86,7 @@ public class Shift implements Serializable {
    }
    
    public ArrayList<Person> getPeople() {
-       return (ArrayList<Person>) people.clone();
+       return this.people;
    }
    
    public void addPersonToList(Person newPerson) {
@@ -104,11 +104,23 @@ public class Shift implements Serializable {
    }
    
    public int getManagerCount() {
-       return 0;
+       int managerCount = 0;
+       for (Person employee : this.people) {
+           if (employee.getRole().equals("Manager")) {
+               managerCount += 1;
+           }
+       }
+       return managerCount;
    }
    
    public int getWorkerCount() {
-       return 1;
+       int workerCount = 0;
+       for (Person employee : this.people) {
+           if (employee.getRole().equals("Worker")) {
+               workerCount += 1;
+           }
+       }
+       return workerCount;
    }
    
    @Override

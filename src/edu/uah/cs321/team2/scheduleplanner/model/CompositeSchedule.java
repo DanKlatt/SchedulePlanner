@@ -24,21 +24,21 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
     }
     
     /**
-     * Retrieves a copy of the people list
+     * Retrieves a reference to the people list
      * 
-     * @return A copy of people
+     * @return A reference to people
      */
     public ArrayList<Person> getPeople() {
-        return (ArrayList<Person>) this.people.clone();
+        return this.people;
     }
     
     /**
-     * Retrieves a copy of the shifts list
+     * Retrieves a reference to the shifts list
      * 
-     * @return A copy of shifts
+     * @return A reference to shifts
      */
     public ArrayList<Shift> getShifts() {
-        return (ArrayList<Shift>) this.shifts.clone();
+        return this.shifts;
     }
     
     /**
@@ -77,6 +77,20 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
      */
     public void addListenerToShiftListeners(ShiftListener newListener) {
         this.shiftListeners.add(newListener);
+    }
+    
+    /**
+     * Finds a shift with a given identifier and returns the shift or null
+     * @param identifier ID of the shift to find
+     * @return Shift with given ID if found, null otherwise
+     */
+    public Shift findShiftByID(long identifier) {
+        int index = indexOfShiftByID(identifier);
+        if (index != UNKNOWN_INDEX) {
+            return this.shifts.get(index);
+        } else {
+            return null;
+        }
     }
     
     public void createDefaultShifts() {
@@ -143,7 +157,7 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
     // Section for ShiftDelegate methods
     @Override
     public void updateShift(Shift updatedShift) {
-        // FInd Shift by ID
+        // Find Shift by ID
         int index = indexOfShiftByID(updatedShift.getIdentifier());
         // Replace Shift in shifts
         if (index != UNKNOWN_INDEX) {

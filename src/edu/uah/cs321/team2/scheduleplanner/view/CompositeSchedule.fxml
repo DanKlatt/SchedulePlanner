@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="compositeSchedule" stylesheets="@scheduleplanner.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.CompositeScheduleViewController">
+<GridPane fx:id="scheduleRootNode" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="compositeSchedule" stylesheets="@scheduleplanner.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.CompositeScheduleViewController">
   <columnConstraints>
     <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="60.0" percentWidth="9.0" prefWidth="100.0" />
       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
@@ -56,256 +57,158 @@
       <Label text="Friday" GridPane.columnIndex="5" />
       <Label text="Saturday" GridPane.columnIndex="6" />
       <Label text="Sunday" GridPane.columnIndex="7" />
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.rowSpan="4" fx:id="compositeShift_0">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2" fx:id="shiftManagers_0">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_0" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" fx:id="shiftWorkers_0"/>
+            <Label id="shiftWorkers_0" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_0" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="1" GridPane.rowIndex="12" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_1" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_1" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_1" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="2" GridPane.rowIndex="7" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_2" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_2" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_2" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="2" GridPane.rowIndex="12" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_3" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_3" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_3" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="3" GridPane.rowIndex="7" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_4" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_4" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_4" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="3" GridPane.rowIndex="12" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_5" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_5" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_5" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="4" GridPane.rowIndex="7" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_6" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_6" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_6" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="4" GridPane.rowIndex="12" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_7" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_7" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_7" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="5" GridPane.rowIndex="7" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_8" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_8" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_8" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="5" GridPane.rowIndex="12" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_9" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_9" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_9" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="6" GridPane.rowIndex="7" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_10" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_10" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_10" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="6" GridPane.rowIndex="12" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_11" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_11" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_11" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="7" GridPane.rowIndex="7" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_12" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_12" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_12" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="compositeShift" GridPane.columnIndex="7" GridPane.rowIndex="12" GridPane.rowSpan="4">
          <children>
             <Label alignment="CENTER" styleClass="compositeShiftLabels" text="Managers" textAlignment="CENTER" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="2">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <Label styleClass="compositeShiftLabels" text="Workers">
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </Label>
+            <Label id="shiftManagers_13" styleClass="compositeShiftLabels" text="2" />
+            <Label styleClass="compositeShiftLabels" text="Workers" />
             <Separator prefWidth="200.0" />
-            <Label styleClass="compositeShiftLabels" text="8" />
+            <Label id="shiftWorkers_13" styleClass="compositeShiftLabels" text="8" />
+            <Button id="shiftButton_13" mnemonicParsing="false" onAction="#selectShift" text="Edit" />
          </children>
       </VBox>
    </children>
