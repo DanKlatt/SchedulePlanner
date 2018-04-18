@@ -40,12 +40,15 @@ public class PeopleListViewController implements PersonListener {
 /**
  * Setting the person's data from the array list of people to people list
  * 
- * @param people 
+ * @param people: array of persons
  */
     public void setAllPersons(ArrayList<Person> people) {
         this.allPersons = people;
     }
     
+    /**
+     * This function populates the people list GUI
+     */
     public void refreshView() {
         // Gets the scene so node elements can be accessed
         Scene scene = rootNode.getScene();
@@ -60,7 +63,7 @@ public class PeopleListViewController implements PersonListener {
         // the people list
         String ident = "#vbox_add";
         VBox vboxa = (VBox) scene.lookup(ident);       
-        if(this.allPersons.size() == 10) {
+        if(this.allPersons.size() == MAX_PEOPLE) {
             vboxa.setVisible(false);
         }
         else {
@@ -91,26 +94,53 @@ public class PeopleListViewController implements PersonListener {
                 name.setText(staff.getName());
                 role.setText(staff.getRole());
                 phone.setText(staff.getPhone());
+               
+                // Find each edit button by its string ID 
+                identifier = "#edit_" + i;
+                Button edit_button = (Button) scene.lookup(identifier);
+                
+                // Now set the people identifier to the unique ID associated with a person
+                edit_button.getProperties().put(ID_KEY, Long.toString(staff.getIdentifier()));
+                
+                // Find each delete button by its string ID
+                identifier = "#delete_" + i;
+                Button del_button = (Button) scene.lookup(identifier);
+                // Now set the people identifier to the unique ID associated with a person
+                del_button.getProperties().put(ID_KEY, Long.toString(staff.getIdentifier()));           
             } else {
                 vbox.setVisible(false);
             }
         }
     }
-
+/**
+ * This method is called when an edit button is pressed
+ * @param event is the ActionEvent
+ */
     public void EditPerson(ActionEvent event) { 
         //We know that this action is always by the press of an edit button
         //so get the actual button
         Button btn = (Button) event.getSource();
         
         //Get the button ID as a string and convert to integer
-        String id = btn.getId();
-        int i= Integer.parseInt(id);
+    //    String id = btn.getId();
+    //    int i= Integer.parseInt(id);
         //System.out.println("Here " + i);
         
         Person e = null;
-  
+        // Retrieve the ID_KEY from the edit button
+        String identifierValue = (String) btn.getProperties().get(ID_KEY);
+        // Convert the identifier value string to a long to get the actual identifier
+        // of the person associated with this edit key
+        long personIdentifier = Long.parseLong(identifierValue);
+        // Find person with identifier
+        for (Person person : this.allPersons) {
+            if (person.getIdentifier() == personIdentifier) {
+                e = person;
+                break;
+            }
+        }
         //Get the actual person being edited by the index from the button id
-        e = this.allPersons.get(i);
+        // e = this.allPersons.get(i);
         //System.out.println("Here " + i);  
         
         //load the edit person GUI
@@ -147,9 +177,16 @@ public class PeopleListViewController implements PersonListener {
             catch(Exception e1) {
         }
         
-        this.delegate.editPerson(e);
-        this.refreshView();
+        if(e != null) {
+            this.delegate.editPerson(e);
+            this.refreshView();
+        }
     }
+    
+    /**
+     * This method is called when the Add button is pressed
+     * @param event is the ActionEvent
+     */
     public void AddPerson(ActionEvent event) {
         //Load the edit person GUI
         FXMLLoader editpersonLoader = new FXMLLoader();
@@ -178,25 +215,42 @@ public class PeopleListViewController implements PersonListener {
     //    this.delegate.addPerson(newPerson);
         this.refreshView();
     }
+    
+    /**
+     * This method is called when a delete button is pressed
+     * @param event is the ActionEvent
+     */
     public void DeletePerson(ActionEvent event) { 
         //Get the delete button
         Button btn = (Button) event.getSource();
         
         //Get the button ID as a string and convert to integer
-        String id = btn.getId();
-        int i= Integer.parseInt(id);
+        //String id = btn.getId();
+        //int i= Integer.parseInt(id);
         //System.out.println("Here " + i);
         
         Person e = null;
   
         //Get the actual person being deleted by the index from the button id
-        e = this.allPersons.get(i);
+        //e = this.allPersons.get(i);
         
-        this.delegate.deletePerson(e);
+        // Retrieve the person identifier key from ID_KEY
+        String identifierValue = (String) btn.getProperties().get(ID_KEY);
+        // Convert the identifier value string to a long to get the actual identifier
+        // of the person associated with this delete key
+        long personIdentifier = Long.parseLong(identifierValue);
+        // Find person with identifier
+        for (Person person : this.allPersons) {
+            if (person.getIdentifier() == personIdentifier) {
+                e = person;
+                break;
+            }
+        }
         
-        //this.allPersons.remove(i);
-        
-        //this.refreshView();
+        if(e != null) {
+            this.delegate.deletePerson(e);
+            this.refreshView();
+        }
     }
     
     @Override
