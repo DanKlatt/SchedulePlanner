@@ -67,6 +67,9 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
      * @param newListener The new listener to be notified when changes to persons occur
      */
     public void addListenerToPersonListeners(PersonListener newListener) {
+        if(this.personListeners == null) {
+            this.personListeners = new ArrayList<>();
+        }
         this.personListeners.add(newListener);
     }
     
@@ -76,6 +79,9 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
      * @param newListener The new listener to be notified when changes to shifts occur
      */
     public void addListenerToShiftListeners(ShiftListener newListener) {
+        if(this.shiftListeners == null) {
+            this.shiftListeners = new ArrayList<>();
+        }
         this.shiftListeners.add(newListener);
     }
     
@@ -212,6 +218,6 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
     private static final long serialVersionUID = 1L;
     private ArrayList<Person> people;
     private ArrayList<Shift> shifts;
-    private ArrayList<PersonListener> personListeners;
-    private ArrayList<ShiftListener> shiftListeners;
+    private transient ArrayList<PersonListener> personListeners;
+    private transient ArrayList<ShiftListener> shiftListeners;
 }

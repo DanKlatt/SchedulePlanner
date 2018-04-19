@@ -13,7 +13,7 @@ import java.io.ObjectOutputStream;
  * 
  * @author Team 2
  */
-public class DataSerializier {
+public class DataSerializer {
     public static void saveCompositeSchedule(CompositeSchedule schedule) {        
         try {
             // binary output file stream
@@ -27,14 +27,13 @@ public class DataSerializier {
             objectOutput.flush();
             objectOutput.close();
         } catch (FileNotFoundException fileEx) {
-            
+            System.out.println(fileEx.getMessage());
         } catch (IOException ioEx) {
-            
+            System.out.println(ioEx.getMessage());
         }
     }
     
     public static CompositeSchedule loadCompositeSchedule() {
-        CompositeSchedule schedule = null;
         try {
             // binary input file stream
             FileInputStream fileInput = new FileInputStream(filename);
@@ -43,17 +42,17 @@ public class DataSerializier {
             ObjectInputStream objectInput = new ObjectInputStream(fileInput);
             
             // reading object steam value as CompositeSchedule class
-            schedule = (CompositeSchedule) objectInput.readObject();
+            CompositeSchedule schedule = (CompositeSchedule) objectInput.readObject();
             objectInput.close();
-        } catch (FileNotFoundException fileEx) {
-            
+                        
+            return schedule;
         } catch (IOException ioEx) {
-            
+            System.out.println(ioEx.getMessage());
         } catch (ClassNotFoundException classEx) {
-            
+            System.out.println(classEx.getMessage());
         }
         
-        return schedule;
+        return null;
     }
     
     private static final String filename = "ScheduleData.ser";
