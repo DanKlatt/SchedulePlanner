@@ -9,3 +9,7 @@
 .compositeShiftLabels {
     -fx-text-fill: white;
 }
+
+.nameSpacing { 
+    -fx-spacing: 10px;
+}
