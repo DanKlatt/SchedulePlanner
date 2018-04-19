@@ -20,11 +20,13 @@ public class SchedulePlanner extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        //create composite schedule instances and default shifts
-        CompositeSchedule compositeSchedule = new CompositeSchedule();
-        // Just create defaults for now
-        compositeSchedule.createDefaultShifts();
-        
+        this.compositeSchedule = DataSerializer.loadCompositeSchedule();
+        if (this.compositeSchedule == null) {
+            // If no schedule found, create composite schedule instance and default shifts
+            this.compositeSchedule = new CompositeSchedule();
+            this.compositeSchedule.createDefaultShifts();
+        }
+                
         // Load root Border Pane
         FXMLLoader rootLoader = new FXMLLoader();
         rootLoader.setLocation(SchedulePlanner.class.getResource("view/RootBorder.fxml"));
@@ -36,7 +38,7 @@ public class SchedulePlanner extends Application {
         GridPane compositeSchedulePane = (GridPane) compositeLoader.load();
         
         CompositeScheduleViewController scheduleController = (CompositeScheduleViewController) compositeLoader.getController();
-        scheduleController.setCompositeSchedule(compositeSchedule);
+        scheduleController.setCompositeSchedule(this.compositeSchedule);
         
         root.setCenter(compositeSchedulePane);
                 
@@ -46,8 +48,8 @@ public class SchedulePlanner extends Application {
         VBox peopleList = (VBox) peopleLoader.load();
         
         PeopleListViewController peopleController = (PeopleListViewController) peopleLoader.getController();
-        peopleController.setAllPersons(compositeSchedule.getPeople());
-        peopleController.setDelegate(compositeSchedule);
+        peopleController.setAllPersons(this.compositeSchedule.getPeople());
+        peopleController.setDelegate(this.compositeSchedule);
         
         root.setRight(peopleList);
         
@@ -63,6 +65,11 @@ public class SchedulePlanner extends Application {
         scheduleController.refreshView();
         peopleController.refreshView();
     }
+    
+    @Override
+    public void stop() {
+        DataSerializer.saveCompositeSchedule(this.compositeSchedule);
+    }
 
     /**
      * @param args the command line arguments
@@ -71,4 +78,5 @@ public class SchedulePlanner extends Application {
         launch(args);
     }
     
+    private CompositeSchedule compositeSchedule;
 }
