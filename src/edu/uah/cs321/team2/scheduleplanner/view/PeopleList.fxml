@@ -11,7 +11,7 @@
 
 <VBox id="rootNode" fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
    <children>
-      <VBox id="vbox_0" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_0" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -23,17 +23,17 @@
                   <Button id="edit_0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="27.0" prefWidth="46.0" text="Edit" />
                   <Button id="delete_0" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_0" text="Manager" />
-                  <Label id="phoneLabel_0" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 479-3444" />
+                  <Label id="phoneLabel_0" text="    (256) 479-3444" textAlignment="RIGHT" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_1" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_1" prefHeight="53.0" prefWidth="226.0">
          <children>
-            <HBox prefHeight="45.0" prefWidth="190.0">
+            <HBox>
                <children>
                   <Label id="personName_1" prefHeight="18.0" prefWidth="102.0" text="Martin Kane">
                      <font>
@@ -43,16 +43,16 @@
                   <Button id="edit_1" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_1" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="45.0" prefWidth="190.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_1" text="Manager" />
-                  <Label id="phoneLabel_1" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="141.0" text="    (256) 352-9765" />
+                  <Label id="phoneLabel_1" prefHeight="17.0" prefWidth="141.0" text="    (256) 352-9765" />
                </children>
             </HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_2" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_2" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -64,15 +64,15 @@
                   <Button id="edit_2" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_2" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_2" text="Worker" />
-                  <Label id="phoneLabel_2" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 541-4760" />
+                  <Label id="phoneLabel_2" prefHeight="17.0" prefWidth="124.0" text="    (256) 541-4760" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_3" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_3" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -84,15 +84,15 @@
                   <Button id="edit_3" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_3" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_3" text="Worker" />
-                  <Label id="phoneLabel_3" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 772-1005" />
+                  <Label id="phoneLabel_3" prefHeight="17.0" prefWidth="124.0" text="    (256) 772-1005" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_4" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_4" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -104,15 +104,15 @@
                   <Button id="edit_4" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_4" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_4" text="Worker" />
-                  <Label id="phoneLabel_4" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 912-3725" />
+                  <Label id="phoneLabel_4" prefHeight="17.0" prefWidth="124.0" text="    (256) 912-3725" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_5" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_5" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -124,15 +124,15 @@
                   <Button id="edit_5" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_5" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_5" text="Worker" />
-                  <Label id="phoneLabel_5" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="124.0" text="    (256) 998-2263" />
+                  <Label id="phoneLabel_5" prefHeight="17.0" prefWidth="124.0" text="    (256) 998-2263" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_6" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_6" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -144,16 +144,16 @@
                   <Button id="edit_6" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_6" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_6" prefHeight="17.0" prefWidth="202.0" text="Worker" />
-                  <Label id="phoneLabel_6" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="277.0" text="    (256) 998-2263" />
+                  <Label id="phoneLabel_6" prefHeight="17.0" prefWidth="277.0" text="    (256) 998-2263" />
                </children>
             </HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_7" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_7" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -165,15 +165,15 @@
                   <Button id="edit_7" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_7" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_7" text="Worker" />
-                  <Label id="phoneLabel_7" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="121.0" text="    (256) 998-2263" />
+                  <Label id="phoneLabel_7" prefHeight="17.0" prefWidth="121.0" text="    (256) 998-2263" />
                </children>
             </HBox>
          </children>
       </VBox>
-      <VBox id="vbox_8" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_8" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -185,15 +185,15 @@
                   <Button id="edit_8" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_8" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_8" text="Worker" />
-                  <Label id="phoneLabel_8" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="152.0" text="    (256) 998-2263" />
+                  <Label id="phoneLabel_8" prefHeight="17.0" prefWidth="152.0" text="    (256) 998-2263" />
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_9" prefHeight="53.0" prefWidth="226.0" visible="false">
+      <VBox id="vbox_9" prefHeight="53.0" prefWidth="226.0">
          <children>
             <HBox prefHeight="28.0" prefWidth="213.0">
                <children>
@@ -205,7 +205,7 @@
                   <Button id="edit_9" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_9" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox spacing="10.0">
                <children>
                   <Label id="roleLabel_9" prefHeight="17.0" prefWidth="61.0" text="Worker" />
                   <Label id="phoneLabel_9" text="(256) 655-0130" />
