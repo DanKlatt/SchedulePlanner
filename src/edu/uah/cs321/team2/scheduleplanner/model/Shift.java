@@ -1,11 +1,12 @@
 package edu.uah.cs321.team2.scheduleplanner.model;
 
-/**
- *
- * @author Team 2
- */
 import java.io.Serializable;
 import java.util.*;
+
+/**
+ * A class for creating and managing shift objects
+ * @author Team 2
+ */
 
 public class Shift implements Serializable {
    public enum Day {
@@ -44,16 +45,33 @@ public class Shift implements Serializable {
            this.time = readableTime;
        }
        
+       /**
+        * Getter for the start or end time of shift
+        * @return Start of end time of shift
+        */
        public String getTime() {
            return time;
        }
    }
    
-   public Shift(Day day, Hour startTime, Hour endTime) {
+    /**
+     * Constructs a shift object
+     * @param day Day the shift is on
+     * @param startTime Start time of the shift
+     * @param endTime End time of the shift
+     */
+    public Shift(Day day, Hour startTime, Hour endTime) {
        this(new Date().getTime(),day,startTime,endTime);
    }
    
-   public Shift(long id, Day day, Hour start, Hour end) {
+    /**
+     * Constructs a shift object with a shift identifier
+     * @param id Shift identifier
+     * @param day Day the shift is on
+     * @param start Start time of the shift
+     * @param end Ehd time of the shift
+     */
+    public Shift(long id, Day day, Hour start, Hour end) {
        this.identifier = id;
        this.day = day;
        this.startTime = start;
@@ -61,45 +79,85 @@ public class Shift implements Serializable {
        this.people = new ArrayList<>();
    }
    
-   public long getIdentifier() {
+    /**
+     * Getter for shift identifier
+     * @return Shift identifier
+     */
+    public long getIdentifier() {
        return this.identifier;
    }
    
-   public Day getDay(){
+    /**
+     * Getter for shift day
+     * @return Shift day
+     */
+    public Day getDay(){
        return day;
    }
    
-   public Hour getStartTime() {
+    /**
+     * Getter for shift start time
+     * @return Shift start time
+     */
+    public Hour getStartTime() {
        return startTime;
    }
    
-   public String getReadableStartTime() {
+    /**
+     * Getter for shift start time in string format
+     * @return Shift start time in string format
+     */
+    public String getReadableStartTime() {
        return startTime.getTime();
    }
    
-   public Hour getEndTime() {
+    /**
+     * Getter for shift end time
+     * @return Shift end time
+     */
+    public Hour getEndTime() {
        return endTime;
    }
    
-   public String getReadableEndTime() {
+    /**
+     * Getter for shift end time in string format
+     * @return Shift end time in string format
+     */
+    public String getReadableEndTime() {
        return endTime.getTime();
    }
    
-   public ArrayList<Person> getPeople() {
+    /**
+     * Getter for people assigned to a shift
+     * @return People assigned to a shift
+     */
+    public ArrayList<Person> getPeople() {
        return this.people;
    }
    
-   public void addPersonToList(Person newPerson) {
+    /**
+     * Setter for adding a person to a shift
+     * @param newPerson Person to be added to a shift
+     */
+    public void addPersonToList(Person newPerson) {
        people.add(newPerson);
    }
    
-   public void removePersonFromList(Person oldPerson) {
+    /**
+     * Setter for removing someone from a shift
+     * @param oldPerson Person to be removed from a shift
+     */
+    public void removePersonFromList(Person oldPerson) {
        if (!people.isEmpty() && people.contains(oldPerson)) {
            people.remove(oldPerson);
        }
    }
    
-   public void changePersonInList(Person updatedPerson) {
+    /**
+     * Update a person already assigned to a shift
+     * @param updatedPerson Person to be updated
+     */
+    public void changePersonInList(Person updatedPerson) {
        if(!people.isEmpty()) {
            for(Person person : this.people) {
                if(person.getIdentifier() == updatedPerson.getIdentifier()) {
@@ -110,11 +168,18 @@ public class Shift implements Serializable {
        }
    }
    
-   public void removeAllPeopleFromShift() {
+    /**
+     * Remove all people from a shift
+     */
+    public void removeAllPeopleFromShift() {
        this.people = new ArrayList<>();
    }
    
-   public int getManagerCount() {
+    /**
+     * Getter for the number of managers assigned to a shift
+     * @return The count of managers assigned to a shift
+     */
+    public int getManagerCount() {
        int managerCount = 0;
        for (Person employee : this.people) {
            if (employee.getRole().equals("Manager")) {
@@ -124,7 +189,11 @@ public class Shift implements Serializable {
        return managerCount;
    }
    
-   public int getWorkerCount() {
+    /**
+     * Getter for the number of workers assigned to a shift
+     * @return The count of managers assigned to a shift
+     */
+    public int getWorkerCount() {
        int workerCount = 0;
        for (Person employee : this.people) {
            if (employee.getRole().equals("Worker")) {
@@ -134,6 +203,10 @@ public class Shift implements Serializable {
        return workerCount;
    }
    
+     /**
+     * Getter for a summary of shift information in string format
+     * @return String containing a summary of shift information
+     */
    @Override
    public String toString() {
        return "Shift [shiftID=" + this.identifier
