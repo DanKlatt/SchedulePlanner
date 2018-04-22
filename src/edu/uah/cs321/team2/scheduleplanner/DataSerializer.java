@@ -14,6 +14,11 @@ import java.io.ObjectOutputStream;
  * @author Team 2
  */
 public class DataSerializer {
+    
+    /**
+     * Class method for saving a composite schedule to the default file location
+     * @param schedule The composite schedule to be serialized and saved
+     */
     public static void saveCompositeSchedule(CompositeSchedule schedule) {        
         try {
             // binary output file stream
@@ -33,6 +38,10 @@ public class DataSerializer {
         }
     }
     
+    /**
+     * Class method for loading a composite schedule from the default file location
+     * @return Either a CompositeSchedule object or null
+     */
     public static CompositeSchedule loadCompositeSchedule() {
         try {
             // binary input file stream

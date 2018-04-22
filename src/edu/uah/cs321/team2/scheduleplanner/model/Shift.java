@@ -9,10 +9,16 @@ import java.util.*;
  */
 
 public class Shift implements Serializable {
+   /**
+    * Day enumeration containing all days of the week
+    */
    public enum Day {
        Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday
    }
    
+   /**
+    * Hour enumeration containing every hour in a day, in 24H format
+    */
    public enum Hour {
        ZERO("00:00"),
        ONE("01:00"),
@@ -46,8 +52,8 @@ public class Shift implements Serializable {
        }
        
        /**
-        * Getter for the start or end time of shift
-        * @return Start of end time of shift
+        * Getter for the human readable time property of the Hour enumeration
+        * @return String representation of the Hour
         */
        public String getTime() {
            return time;
@@ -69,7 +75,7 @@ public class Shift implements Serializable {
      * @param id Shift identifier
      * @param day Day the shift is on
      * @param start Start time of the shift
-     * @param end Ehd time of the shift
+     * @param end End time of the shift
      */
     public Shift(long id, Day day, Hour start, Hour end) {
        this.identifier = id;
