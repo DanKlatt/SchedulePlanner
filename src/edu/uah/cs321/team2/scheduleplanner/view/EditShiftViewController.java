@@ -27,22 +27,33 @@ public class EditShiftViewController {
         
     }
     
-    // Shift setter
+    /**
+     * Setter for the Shift object to display/edit
+     * @param newShift Shift object representing the shift to be viewed
+     */
     public void setShift(Shift newShift) {
         this.shift = newShift;
     }
     
-    // People List setter
+    /**
+     * Setter for the list of all Persons
+     * @param people ArrayList of Person objects representing all people
+     */
     public void setAllPersons(ArrayList<Person> people) {
         this.allPersons = people;
     }
     
-    // Delegate setter
+    /**
+     * Setter for delegate that implements the ShiftDelegate interface for passing data out of the controller
+     * @param newDelegate ShiftDelegate object representing the new delegate
+     */
     public void setDelegate(ShiftDelegate newDelegate) {
         this.delegate = newDelegate;
     }
     
-    // View binding method
+    /**
+     * Updates the view with the data currently assigned to the controller
+     */
     public void refreshView() {
         // Gets the scene so node elements can be accessed
         Scene scene = rootNode.getScene();
