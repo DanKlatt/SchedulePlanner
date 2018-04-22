@@ -7,16 +7,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox id="rootNode" fx:id="rootNode" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
+<VBox id="rootNode" fx:id="rootNode" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
    <children>
       <VBox id="vbox_0" >
          <children>
             <HBox >
                <children>
                   <Label id="personName_0"  text="James Smith" styleClass="personName">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
                   </Label>
                   <Button id="edit_0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_0" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -34,9 +31,7 @@
             <HBox>
                <children>
                   <Label id="personName_1"  text="Martin Kane" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_1" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
                   <Button id="delete_1" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -55,9 +50,7 @@
             <HBox >
                <children>
                   <Label id="personName_2"  text="Leah Bowman" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_2" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_2" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -75,9 +68,7 @@
             <HBox >
                <children>
                   <Label id="personName_3" text="Jim Walter" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_3" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
                   <Button id="delete_3" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -95,9 +86,7 @@
             <HBox >
                <children>
                   <Label id="personName_4"  text="Felicity Jones" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_4" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_4" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -115,9 +104,7 @@
             <HBox >
                <children>
                   <Label id="personName_5"  text="Sammy Tucker" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_5" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_5" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -135,9 +122,7 @@
             <HBox >
                <children>
                   <Label id="personName_6"  text="Alison Redding" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_6" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_6" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -156,9 +141,7 @@
             <HBox >
                <children>
                   <Label id="personName_7"  text="Elijah Reign" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_7" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_7" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -176,9 +159,7 @@
             <HBox >
                <children>
                   <Label id="personName_8"  text="Zack Hancock" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_8" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
                   <Button id="delete_8" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -196,9 +177,7 @@
             <HBox >
                <children>
                   <Label id="personName_9"  text="Shay Lim" styleClass="personName">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                     
                   </Label>
                   <Button id="edit_9" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
                   <Button id="delete_9" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
@@ -213,7 +192,7 @@
       </VBox>
       <VBox id="vbox_add" prefHeight="27.0" prefWidth="204.0">
          <children>
-            <Button id="100" alignment="CENTER" mnemonicParsing="false" onAction="#AddPerson" prefHeight="27.0" prefWidth="206.0" text="Add" />
+            <Button id="100" alignment="CENTER" mnemonicParsing="false" onAction="#AddPerson" prefHeight="27.0" prefWidth="230.0" text="Add" />
          </children>
       </VBox>
    </children>
