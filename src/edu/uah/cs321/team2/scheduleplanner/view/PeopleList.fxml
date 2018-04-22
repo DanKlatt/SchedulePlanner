@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox id="rootNode" fx:id="rootNode" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
+<VBox id="rootNode" fx:id="rootNode" minHeight="-Infinity" minWidth="-Infinity" prefWidth="230.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
    <children>
       <VBox id="vbox_0" >
          <children>
@@ -15,8 +16,16 @@
                <children>
                   <Label id="personName_0"  text="James Smith" styleClass="personName">
                   </Label>
-                  <Button id="edit_0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
-                  <Button id="delete_0" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_0" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_0" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
@@ -33,8 +42,16 @@
                   <Label id="personName_1"  text="Martin Kane" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_1" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
-                  <Button id="delete_1" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_1" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_1" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
@@ -52,15 +69,23 @@
                   <Label id="personName_2"  text="Leah Bowman" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_2" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
-                  <Button id="delete_2" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_2" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_2" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_2" text="Worker" styleClass="secondaryLabel"/>
                   <Label id="phoneLabel_2"  text="    (256) 541-4760" styleClass="secondaryLabel"/>
                </children></HBox>
-            <Separator />
+            <Separator prefWidth="200.0" />
          </children>
       </VBox>
       <VBox id="vbox_3" >
@@ -70,8 +95,16 @@
                   <Label id="personName_3" text="Jim Walter" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_3" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
-                  <Button id="delete_3" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_3" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_3" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
@@ -88,8 +121,16 @@
                   <Label id="personName_4"  text="Felicity Jones" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_4" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
-                  <Button id="delete_4" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_4" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_4" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
@@ -106,8 +147,16 @@
                   <Label id="personName_5"  text="Sammy Tucker" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_5" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
-                  <Button id="delete_5" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_5" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_5" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
@@ -124,8 +173,16 @@
                   <Label id="personName_6"  text="Alison Redding" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_6" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
-                  <Button id="delete_6" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_6" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_6" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
@@ -143,8 +200,16 @@
                   <Label id="personName_7"  text="Elijah Reign" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_7" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
-                  <Button id="delete_7" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_7" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_7" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
@@ -152,6 +217,7 @@
                   <Label id="phoneLabel_7"  text="    (256) 998-2263" styleClass="secondaryLabel"/>
                </children>
             </HBox>
+            <Separator prefWidth="200.0" />
          </children>
       </VBox>
       <VBox id="vbox_8" >
@@ -161,8 +227,16 @@
                   <Label id="personName_8"  text="Zack Hancock" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_8" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
-                  <Button id="delete_8" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_8" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_8" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
@@ -179,8 +253,16 @@
                   <Label id="personName_9"  text="Shay Lim" styleClass="personName">
                      
                   </Label>
-                  <Button id="edit_9" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
-                  <Button id="delete_9" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
+                  <Button id="edit_9" styleClass="personEdit" mnemonicParsing="false" onAction="#EditPerson" >
+                      <tooltip>
+                          <Tooltip text="Edit" />
+                      </tooltip>
+                  </Button>
+                  <Button id="delete_9" styleClass="personDelete" mnemonicParsing="false" onAction="#DeletePerson" >
+                      <tooltip>
+                          <Tooltip text="Delete" />
+                      </tooltip>
+                  </Button>
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>

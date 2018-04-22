@@ -11,17 +11,28 @@
 }
 
 .nameSpacing { 
-    -fx-spacing: 10px;
+    -fx-spacing: 0;
 }
 
 .personName {
     -fx-font-family: "Times New Roman";
-    -fx-font-size: 15pt;
+    -fx-font-size: 13pt;
+    -fx-font-weight: bold;
     -fx-pref-width: 150;
 }
 
 .secondaryLabel {
     -fx-font-family: "Times New Roman";
-    -fx-font-size: 12pt;
+    -fx-font-size: 13pt;
     -fx-pref-width: 115;
 }
+
+.personEdit {
+    -fx-graphic: url("pencil-2x.png");
+}
+
+.personDelete {
+    -fx-graphic: url("trash-2x.png");
+}
+
+/* Uses open source icons provided by Open Iconic - www.useiconic.com/open */
