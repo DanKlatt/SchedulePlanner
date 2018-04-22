@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.uah.cs321.team2.scheduleplanner.view;
 
 import javafx.fxml.FXML;
@@ -12,12 +7,10 @@ import javafx.scene.control.Alert.*;
 import edu.uah.cs321.team2.scheduleplanner.model.Person;
 import edu.uah.cs321.team2.scheduleplanner.model.Role;
 import edu.uah.cs321.team2.scheduleplanner.PersonDelegate;
-//import javafx.collections.ObservableList;
 import javafx.stage.Stage;
 
 /**
- *
- * @author Melissa
+ * Controller class used to handle adding or editing a Person on the PeopleList 
  */
 public class AddEditPersonController {
     
@@ -32,11 +25,7 @@ public class AddEditPersonController {
     private String roleName;
     private Role role;
     private RadioButton selectedRadioButton;
-    
-    //set note above selectedRadioButton in handleSaveButtonAction
-    //private boolean roleSelectedStatus;
-         
-    
+        
     //text field for the first name
     @FXML
     private TextField firstName;
@@ -58,12 +47,13 @@ public class AddEditPersonController {
     @FXML
     private RadioButton Manager;
     
-       
     @FXML
-    public void initialize(){
-    
+    private void initialize(){
     }
     
+    /**
+     * Populates the view with a Person's information if its available
+     */
     public void refreshView() {
         //the case that a person was 
         if(aPerson != null){
@@ -80,28 +70,34 @@ public class AddEditPersonController {
         }
     }
     
+    /**
+     * sets the existing person to the passed in parameter
+     * @param person the Person to be edited
+     */
     public void setPerson(Person person){
         this.aPerson = person;
     }
     
+    /**
+     * sets the existing delegate to the passed in parameter
+     * @param delegate the delegate used to handle information passing
+     */
     public void setDelegate(PersonDelegate delegate) {
         this.delegate = delegate;
     }
     
-    //function to handle when the save button is pressed
     @FXML
-    public void handleSaveButtonAction(ActionEvent event) {
-        
+    private void handleSaveButtonAction(ActionEvent event) {
+    //method to handle when the save button is pressed    
+        //get the infomation from the text fields and radio button
         fName = firstName.getText().trim();
         lName = lastName.getText().trim();
         phone = phoneNum.getText().trim();
-        
-        //I hoping if no radio button is selected then in returns null
-        //otherwise I will need to use function isRadioButtonSelected I created
         selectedRadioButton = (RadioButton)roles.getSelectedToggle();
         
-        //handles the case that any of the fields are empty -- see note above about selectedRadioButton, it may error
-        if (fName==null || lName.isEmpty() || phone.isEmpty()) {
+        //handles the case that any of the fields are empty
+        //will throw an error if any of the fields are empty
+        if (fName.isEmpty() || lName.isEmpty() || phone.isEmpty()) {
             Alert alert = new Alert(AlertType.ERROR, "All fields require an entry.");
             alert.show();
         }
@@ -118,7 +114,7 @@ public class AddEditPersonController {
             }
             //check if aPerson is null and therefore in add mode
             if(aPerson==null){ 
-                //send the data out
+                //create new Person and send the data out
                 aPerson = new Person(fName, lName, phone, role);
                 delegate.addPerson(aPerson);
                 closeSelf();
@@ -132,13 +128,13 @@ public class AddEditPersonController {
                 delegate.editPerson(aPerson);
                 closeSelf();
             }
-            
         }
     }
     
-    //function to handle when the save button is pressed
+    
     @FXML
     private void handleCancelButtonAction(){
+    //function to handle when the cancel button is pressed    
         closeSelf();
     }
     
@@ -146,23 +142,4 @@ public class AddEditPersonController {
         Stage stage  = (Stage) firstName.getScene().getWindow();
         stage.close();
     }
-
-    
-    /*function used to check if a radio button is selected. I can't find
-    a way for java to check if a no selection is made so I just wrote my 
-    own function. Hopefully a toggleGroup.getselectedToggle returns null, then
-    I won't have to use this function
-    private boolean isRadioButtonSelected (ToggleGroup T){
-        boolean selected = false;
-        //loop thru all the radio buttons that belong to the given toggle group
-        //and see if they are selected
-        for(Toggle t : T.getToggles()){
-            //will set selected to true if any button is selected 
-            if(selected==false){
-                selected = t.isSelected();
-            }
-        }
-        return selected;
-        
-    } */    
 }
