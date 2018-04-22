@@ -56,15 +56,14 @@ public class AddEditPersonController {
      */
     public void refreshView() {
         //the case that a person was 
-        if(aPerson != null){
+        if (aPerson != null) {
             firstName.setText(aPerson.getFirstName());
             lastName.setText(aPerson.getLastName());
             phoneNum.setText(aPerson.getPhone());
             roleName = aPerson.getRole();
             if(roleName.equals("Worker")){
                 Worker.setSelected(true);
-            }
-            else{
+            } else{
                 Manager.setSelected(true);
             }
         }
@@ -100,27 +99,24 @@ public class AddEditPersonController {
         if (fName.isEmpty() || lName.isEmpty() || phone.isEmpty()) {
             Alert alert = new Alert(AlertType.ERROR, "All fields require an entry.");
             alert.show();
-        }
+        } else { 
         //case that all field had values
-        else {            
             //get the role from the selected radio button
             roleName = selectedRadioButton.getText();
             
-            if(roleName.equals("Worker")){
+            if (roleName.equals("Worker")) {
                 role = new Role(Role.TYPE_WORKER);
-            }
-            else{
+            } else {
                 role = new Role(Role.TYPE_MANAGER);
             }
             //check if aPerson is null and therefore in add mode
-            if(aPerson==null){ 
+            if (aPerson == null) { 
                 //create new Person and send the data out
                 aPerson = new Person(fName, lName, phone, role);
                 delegate.addPerson(aPerson);
                 closeSelf();
-            }
-            //case that the aPerson was set and therefore in edit mode
-            else{
+            } else {
+            //case that the aPerson was set and therefore in edit mode    
                 aPerson.setFirstName(fName);
                 aPerson.setLastName(lName);
                 aPerson.setPhone(phone);
@@ -130,8 +126,7 @@ public class AddEditPersonController {
             }
         }
     }
-    
-    
+       
     @FXML
     private void handleCancelButtonAction(){
     //function to handle when the cancel button is pressed    
