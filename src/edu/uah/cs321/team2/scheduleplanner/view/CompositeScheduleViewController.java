@@ -18,7 +18,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- *
+ * View Controller class to handle displaying all the shifts associated with a composite schedule
+ * 
  * @author Team 2
  */
 public class CompositeScheduleViewController implements PersonListener, ShiftListener {
@@ -30,10 +31,17 @@ public class CompositeScheduleViewController implements PersonListener, ShiftLis
         
     }
     
+    /**
+     * Setter for the CompositeSchedule to be displayed
+     * @param newSchedule CompositeSchedule representing the schedule to display
+     */
     public void setCompositeSchedule(CompositeSchedule newSchedule) {
         this.schedule = newSchedule;
     }
     
+    /**
+     * Updates the view with the data currently assigned to the controller
+     */
     public void refreshView() {
         // Gets the scene so node elements can be accessed
         Scene scene = scheduleRootNode.getScene();
@@ -72,30 +80,37 @@ public class CompositeScheduleViewController implements PersonListener, ShiftLis
     
     @FXML
     private void selectShift(ActionEvent event) {
+        // Get button from the event
         Button selectedButton = (Button) event.getSource();
+        // Retrieve identifier associated with button
         long shiftID = Long.parseLong((String) selectedButton.getProperties().get(ID_KEY));
+        // Get shift with identifier
         Shift selectedShift = this.schedule.findShiftByID(shiftID);
         if (selectedShift != null) {
             try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(CompositeScheduleViewController.class.getResource("EditShift.fxml"));
-            DialogPane page = (DialogPane) loader.load();
-            
-            Stage dialogStage = new Stage();
-            dialogStage.setTitle("Edit Shift");
-            dialogStage.initModality(Modality.WINDOW_MODAL);
-            dialogStage.initOwner(scheduleRootNode.getScene().getWindow());
-            Scene scene = new Scene(page);
-            dialogStage.setScene(scene);
-            
-            EditShiftViewController controller = loader.getController();
-            controller.setShift(selectedShift);
-            controller.setAllPersons(this.schedule.getPeople());
-            controller.setDelegate(schedule);
-            
-            dialogStage.show();
-            
-            controller.refreshView();
+                // Load the edit shift view
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(CompositeScheduleViewController.class.getResource("EditShift.fxml"));
+                DialogPane page = (DialogPane) loader.load();
+
+                // Make it a modal window
+                Stage dialogStage = new Stage();
+                dialogStage.setTitle("Edit Shift");
+                dialogStage.initModality(Modality.WINDOW_MODAL);
+                dialogStage.initOwner(scheduleRootNode.getScene().getWindow());
+                Scene scene = new Scene(page);
+                dialogStage.setScene(scene);
+
+                // Set the controller properties with appropriate data
+                EditShiftViewController controller = loader.getController();
+                controller.setShift(selectedShift);
+                controller.setAllPersons(this.schedule.getPeople());
+                controller.setDelegate(schedule);
+
+                dialogStage.show();
+
+                // Refresh view AFTER calling shoq
+                controller.refreshView();
             } catch (IOException e) {}
         }
     }

@@ -36,8 +36,13 @@ public class PeopleListViewController implements PersonListener {
     public void initialize() {
 
     }
-    // Delegate setter
-
+    
+    /**
+     * Setter for delegate that implements the PersonDelegate interface 
+     * for passing data out of the controller
+     * 
+     * @param newDelegate PersonDelegate object representing the new delegate
+     */
     public void setDelegate(PersonDelegate newDelegate) {
         this.delegate = newDelegate;
     }

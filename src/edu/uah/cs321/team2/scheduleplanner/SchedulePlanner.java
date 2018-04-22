@@ -12,11 +12,17 @@ import javafx.stage.Stage;
 import edu.uah.cs321.team2.scheduleplanner.model.CompositeSchedule;
 
 /**
- *
+ * Main Application Class for the Schedule Planner application
  * @author Team 2
  */
 public class SchedulePlanner extends Application {
     
+    /**
+     * Overridden start method from Application
+     * Called automatically during program execution, it sets up the initial view
+     * @param stage
+     * @throws Exception 
+     */
     @Override
     public void start(Stage stage) throws Exception {
         
@@ -66,6 +72,10 @@ public class SchedulePlanner extends Application {
         peopleController.refreshView();
     }
     
+    /**
+     * Overridden stop method from Application
+     * Called automatically during execution, it saves the current composite schedule
+     */
     @Override
     public void stop() {
         DataSerializer.saveCompositeSchedule(this.compositeSchedule);

@@ -99,6 +99,9 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
         }
     }
     
+    /**
+     * Method to create default shifts and add them to the composite schedule object
+     */
     public void createDefaultShifts() {
         Shift monMorning = new Shift(1L, Shift.Day.Monday, Shift.Hour.EIGHT, Shift.Hour.THIRTEEN);
         Shift monEvening = new Shift(2L, Shift.Day.Monday, Shift.Hour.FIFTEEN, Shift.Hour.TWENTY);
@@ -208,6 +211,10 @@ public class CompositeSchedule implements Serializable, PersonDelegate, ShiftDel
         }
     }
     
+    /**
+     * Overridden toString method for displaying a CompositeSchedule object
+     * @return String representation of a CompositeSchedule object
+     */
     @Override
     public String toString() {
         return "CompositeSchedule [schedulePeople=" + this.people
