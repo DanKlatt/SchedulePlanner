@@ -7,206 +7,206 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox id="rootNode" fx:id="rootNode" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
+<VBox id="rootNode" fx:id="rootNode" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
    <children>
-      <VBox id="vbox_0" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_0" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_0" prefHeight="27.0" prefWidth="99.0" text="James Smith">
+                  <Label id="personName_0"  text="James Smith" styleClass="personName">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="16.0" />
                      </font>
                   </Label>
-                  <Button id="edit_0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="27.0" text="Edit" />
+                  <Button id="edit_0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_0" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_0" text="Manager" />
-                  <Label id="phoneLabel_0" text="    (256) 479-3444" textAlignment="RIGHT" />
+                  <Label id="roleLabel_0" text="Manager"  styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_0" text="    (256) 479-3444" textAlignment="RIGHT" styleClass="secondaryLabel"/>
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_1" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_1" >
          <children>
             <HBox>
                <children>
-                  <Label id="personName_1" prefHeight="18.0" prefWidth="102.0" text="Martin Kane">
+                  <Label id="personName_1"  text="Martin Kane" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_1" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_1" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
                   <Button id="delete_1" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_1" text="Manager" />
-                  <Label id="phoneLabel_1" prefHeight="17.0" prefWidth="141.0" text="    (256) 352-9765" />
+                  <Label id="roleLabel_1" text="Manager" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_1"  text="    (256) 352-9765" styleClass="secondaryLabel"/>
                </children>
             </HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_2" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_2" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_2" prefHeight="18.0" prefWidth="102.0" text="Leah Bowman">
+                  <Label id="personName_2"  text="Leah Bowman" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_2" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_2" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_2" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_2" text="Worker" />
-                  <Label id="phoneLabel_2" prefHeight="17.0" prefWidth="124.0" text="    (256) 541-4760" />
+                  <Label id="roleLabel_2" text="Worker" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_2"  text="    (256) 541-4760" styleClass="secondaryLabel"/>
                </children></HBox>
-            <Separator prefWidth="200.0" />
+            <Separator />
          </children>
       </VBox>
-      <VBox id="vbox_3" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_3" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_3" prefHeight="18.0" prefWidth="102.0" text="Jim Walter">
+                  <Label id="personName_3" text="Jim Walter" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_3" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_3" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
                   <Button id="delete_3" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_3" text="Worker" />
-                  <Label id="phoneLabel_3" prefHeight="17.0" prefWidth="124.0" text="    (256) 772-1005" />
+                  <Label id="roleLabel_3" text="Worker" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_3"   text="    (256) 772-1005" styleClass="secondaryLabel"/>
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_4" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_4" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_4" prefHeight="18.0" prefWidth="102.0" text="Felicity Jones">
+                  <Label id="personName_4"  text="Felicity Jones" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_4" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_4" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_4" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_4" text="Worker" />
-                  <Label id="phoneLabel_4" prefHeight="17.0" prefWidth="124.0" text="    (256) 912-3725" />
+                  <Label id="roleLabel_4" text="Worker" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_4"  text="    (256) 912-3725" styleClass="secondaryLabel"/>
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_5" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_5" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_5" prefHeight="18.0" prefWidth="102.0" text="Sammy Tucker">
+                  <Label id="personName_5"  text="Sammy Tucker" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_5" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_5" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_5" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_5" text="Worker" />
-                  <Label id="phoneLabel_5" prefHeight="17.0" prefWidth="124.0" text="    (256) 998-2263" />
+                  <Label id="roleLabel_5" text="Worker" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_5" text="    (256) 998-2263" styleClass="secondaryLabel"/>
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_6" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_6" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_6" prefHeight="18.0" prefWidth="102.0" text="Alison Redding">
+                  <Label id="personName_6"  text="Alison Redding" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_6" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_6" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_6" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_6" prefHeight="17.0" prefWidth="202.0" text="Worker" />
-                  <Label id="phoneLabel_6" prefHeight="17.0" prefWidth="277.0" text="    (256) 998-2263" />
+                  <Label id="roleLabel_6"  text="Worker" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_6"  text="    (256) 998-2263" styleClass="secondaryLabel"/>
                </children>
             </HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_7" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_7" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_7" prefHeight="18.0" prefWidth="102.0" text="Elijah Reign">
+                  <Label id="personName_7"  text="Elijah Reign" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_7" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_7" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson"  text="Edit" />
                   <Button id="delete_7" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_7" text="Worker" />
-                  <Label id="phoneLabel_7" prefHeight="17.0" prefWidth="121.0" text="    (256) 998-2263" />
+                  <Label id="roleLabel_7" text="Worker" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_7"  text="    (256) 998-2263" styleClass="secondaryLabel"/>
                </children>
             </HBox>
          </children>
       </VBox>
-      <VBox id="vbox_8" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_8" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_8" prefHeight="18.0" prefWidth="102.0" text="Zack Hancock">
+                  <Label id="personName_8"  text="Zack Hancock" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_8" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_8" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
                   <Button id="delete_8" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_8" text="Worker" />
-                  <Label id="phoneLabel_8" prefHeight="17.0" prefWidth="152.0" text="    (256) 998-2263" />
+                  <Label id="roleLabel_8" text="Worker" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_8"  text="    (256) 998-2263" styleClass="secondaryLabel"/>
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox id="vbox_9" prefHeight="53.0" prefWidth="226.0">
+      <VBox id="vbox_9" >
          <children>
-            <HBox prefHeight="28.0" prefWidth="213.0">
+            <HBox >
                <children>
-                  <Label id="personName_9" prefHeight="18.0" prefWidth="101.0" text="Shay Lim">
+                  <Label id="personName_9"  text="Shay Lim" styleClass="personName">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button id="edit_9" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" text="Edit" />
+                  <Button id="edit_9" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" text="Edit" />
                   <Button id="delete_9" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
             <HBox styleClass="nameSpacing">
                <children>
-                  <Label id="roleLabel_9" prefHeight="17.0" prefWidth="61.0" text="Worker" />
-                  <Label id="phoneLabel_9" text="(256) 655-0130" />
+                  <Label id="roleLabel_9"  text="Worker" styleClass="secondaryLabel"/>
+                  <Label id="phoneLabel_9" text="(256) 655-0130" styleClass="secondaryLabel"/>
                </children></HBox>
             <Separator prefWidth="200.0" />
          </children>

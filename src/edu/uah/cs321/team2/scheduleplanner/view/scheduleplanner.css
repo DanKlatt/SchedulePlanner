@@ -13,3 +13,15 @@
 .nameSpacing { 
     -fx-spacing: 10px;
 }
+
+.personName {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15pt;
+    -fx-pref-width: 150;
+}
+
+.secondaryLabel {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 12pt;
+    -fx-pref-width: 115;
+}
