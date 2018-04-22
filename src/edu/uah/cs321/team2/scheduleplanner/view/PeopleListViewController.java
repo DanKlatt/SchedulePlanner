@@ -128,7 +128,8 @@ public class PeopleListViewController implements PersonListener {
      *
      * @param event is the ActionEvent
      */
-    public void EditPerson(ActionEvent event) {
+    @FXML
+    private void EditPerson(ActionEvent event) {
 
         try {
             // Get the button that was pressed, get the id and find the person
@@ -167,7 +168,8 @@ public class PeopleListViewController implements PersonListener {
      *
      * @param event is the ActionEvent
      */
-    public void AddPerson(ActionEvent event) {
+    @FXML
+    private void AddPerson(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(PeopleListViewController.class.getResource("AddEditPerson.fxml"));
@@ -193,7 +195,8 @@ public class PeopleListViewController implements PersonListener {
      *
      * @param event is the ActionEvent
      */
-    public void DeletePerson(ActionEvent event) {
+    @FXML
+    private void DeletePerson(ActionEvent event) {
         // Get the delete button
         Button btn = (Button) event.getSource();
 
