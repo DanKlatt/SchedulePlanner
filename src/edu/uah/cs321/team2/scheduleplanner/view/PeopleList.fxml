@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox id="rootNode" fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
+<VBox id="rootNode" fx:id="rootNode" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uah.cs321.team2.scheduleplanner.view.PeopleListViewController">
    <children>
       <VBox id="vbox_0" prefHeight="53.0" prefWidth="226.0">
          <children>
@@ -23,7 +21,7 @@
                   <Button id="edit_0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="27.0" prefWidth="46.0" text="Edit" />
                   <Button id="delete_0" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_0" text="Manager" />
                   <Label id="phoneLabel_0" text="    (256) 479-3444" textAlignment="RIGHT" />
@@ -43,7 +41,7 @@
                   <Button id="edit_1" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_1" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_1" text="Manager" />
                   <Label id="phoneLabel_1" prefHeight="17.0" prefWidth="141.0" text="    (256) 352-9765" />
@@ -64,7 +62,7 @@
                   <Button id="edit_2" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_2" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_2" text="Worker" />
                   <Label id="phoneLabel_2" prefHeight="17.0" prefWidth="124.0" text="    (256) 541-4760" />
@@ -84,7 +82,7 @@
                   <Button id="edit_3" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_3" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_3" text="Worker" />
                   <Label id="phoneLabel_3" prefHeight="17.0" prefWidth="124.0" text="    (256) 772-1005" />
@@ -104,7 +102,7 @@
                   <Button id="edit_4" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_4" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_4" text="Worker" />
                   <Label id="phoneLabel_4" prefHeight="17.0" prefWidth="124.0" text="    (256) 912-3725" />
@@ -124,7 +122,7 @@
                   <Button id="edit_5" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_5" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_5" text="Worker" />
                   <Label id="phoneLabel_5" prefHeight="17.0" prefWidth="124.0" text="    (256) 998-2263" />
@@ -144,7 +142,7 @@
                   <Button id="edit_6" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_6" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_6" prefHeight="17.0" prefWidth="202.0" text="Worker" />
                   <Label id="phoneLabel_6" prefHeight="17.0" prefWidth="277.0" text="    (256) 998-2263" />
@@ -165,7 +163,7 @@
                   <Button id="edit_7" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_7" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_7" text="Worker" />
                   <Label id="phoneLabel_7" prefHeight="17.0" prefWidth="121.0" text="    (256) 998-2263" />
@@ -185,7 +183,7 @@
                   <Button id="edit_8" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_8" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_8" text="Worker" />
                   <Label id="phoneLabel_8" prefHeight="17.0" prefWidth="152.0" text="    (256) 998-2263" />
@@ -205,7 +203,7 @@
                   <Button id="edit_9" lineSpacing="1.0" mnemonicParsing="false" onAction="#EditPerson" prefHeight="14.0" prefWidth="42.0" text="Edit" />
                   <Button id="delete_9" mnemonicParsing="false" onAction="#DeletePerson" text="Delete" />
                </children></HBox>
-            <HBox styleClass = "nameSpacing">
+            <HBox styleClass="nameSpacing">
                <children>
                   <Label id="roleLabel_9" prefHeight="17.0" prefWidth="61.0" text="Worker" />
                   <Label id="phoneLabel_9" text="(256) 655-0130" />

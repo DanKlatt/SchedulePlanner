@@ -43,13 +43,13 @@
       <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label text="12:00 AM" GridPane.rowSpan="2" />
-      <Label text="4:00 AM" GridPane.rowIndex="3" GridPane.rowSpan="2" />
-      <Label text="8:00 AM" GridPane.rowIndex="6" GridPane.rowSpan="2" />
-      <Label text="12:00 PM" GridPane.rowIndex="9" GridPane.rowSpan="2" />
-      <Label text="4:00 PM" GridPane.rowIndex="12" GridPane.rowSpan="2" />
-      <Label text="8:00 PM" GridPane.rowIndex="15" GridPane.rowSpan="2" />
-      <Label text="11:00 PM" GridPane.rowIndex="18" GridPane.rowSpan="2" />
+      <Label text="00:00" GridPane.rowSpan="2" />
+      <Label text="04:00" GridPane.rowIndex="3" GridPane.rowSpan="2" />
+      <Label text="08:00" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+      <Label text="12:00" GridPane.rowIndex="9" GridPane.rowSpan="2" />
+      <Label text="16:00" GridPane.rowIndex="12" GridPane.rowSpan="2" />
+      <Label text="20:00" GridPane.rowIndex="15" GridPane.rowSpan="2" />
+      <Label text="23:00" GridPane.rowIndex="18" GridPane.rowSpan="2" />
       <Label text="Monday" GridPane.columnIndex="1" />
       <Label text="Tuesday" GridPane.columnIndex="2" />
       <Label text="Wednesday" GridPane.columnIndex="3" />
