@@ -52,7 +52,7 @@ public class AddEditPersonController {
     }
     
     /**
-     * Populates the view with a Person's information if its available
+     * Populates the GUI with a Person's information if its available
      */
     public void refreshView() {
         //the case that a person was 
