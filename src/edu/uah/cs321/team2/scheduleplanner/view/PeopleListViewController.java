@@ -216,7 +216,7 @@ public class PeopleListViewController implements PersonListener {
         }
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete Person");
-        alert.setContentText("Are you sure?  Press OK to confirm, or cancel to Back out.");
+        alert.setContentText("Are you sure?  Press OK to confirm, or cancel to back out.");
         Optional<ButtonType> result = alert.showAndWait();
 
         if (result.isPresent() && (result.get() == ButtonType.OK)) {
